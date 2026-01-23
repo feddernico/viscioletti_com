@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Federico Viscioletti">
+<meta name="dcterms.date" content="2024-06-12">
+
+<title>Love this Guide to Learning to Rank: RankNet, LambdaRank, and ListNet Explained – Viscioletti</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-26827f95213357c060b998e0666f8ebe.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Viscioletti</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/feddernico"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/feddernico"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Love this Guide to Learning to Rank: RankNet, LambdaRank, and ListNet Explained</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">ai</div>
+                <div class="quarto-category">data-science</div>
+                <div class="quarto-category">python</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Federico Viscioletti </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 12, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231654585.png"><img src="images/image_2024-06-12_231654585.png" class="img-fluid"></a></p>
+<p>Hey there, data enthusiasts! we’re diving into the fascinating world of Learning to Rank (LTR) methods—a crucial machine learning tool in the realm of information retrieval. Whether you’re a seasoned data scientist or just starting out, understanding LTR can significantly enhance your ability to provide users with the most relevant search results. Let’s break it down!</p>
+<section id="introduction-to-learning-to-rank-methods" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-learning-to-rank-methods">Introduction to Learning to Rank methods</h2>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231708883.png"><img src="images/image_2024-06-12_231708883.png" class="img-fluid"></a></p>
+<section id="definition-and-importance-in-information-retrieval" class="level3">
+<h3 class="anchored" data-anchor-id="definition-and-importance-in-information-retrieval">Definition and importance in information retrieval</h3>
+<p>Learning to Rank (LTR) is a supervised machine learning technique used to rank a list of documents or items based on their relevance score to a query or user.LTR is crucial in information retrieval and search engines, as it helps to provide users with the most relevant search results.</p>
+</section>
+</section>
+<section id="understanding-learning-to-rank-methods" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-learning-to-rank-methods">Understanding Learning to Rank Methods</h2>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231718774.png"><img src="images/image_2024-06-12_231718774.png" class="img-fluid"></a></p>
+<section id="pointwise-pairwise-ranking-and-listwise-approaches" class="level3">
+<h3 class="anchored" data-anchor-id="pointwise-pairwise-ranking-and-listwise-approaches">Pointwise, Pairwise Ranking, and Listwise approaches</h3>
+<p><strong>Pointwise approach</strong>: scores each document independently with a ground truth target value, similar to traditional regression and classification tasks.</p>
+<p><strong>Pairwise ranking approach</strong>: scores each document based on a given query and considers the ranking position, used to overcome the drawbacks of pointwise ranking.</p>
+<p><strong>Listwise approach</strong>: takes into account the list of ranked documents, along with their relevance labels, to learn relationships between items in a list.</p>
+</section>
+</section>
+<section id="machine-learning-for-ranking" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-for-ranking">Machine Learning for Ranking</h2>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231730945.png"><img src="images/image_2024-06-12_231730945.png" class="img-fluid"></a></p>
+<section id="training-data-preparation-and-optimisation" class="level3">
+<h3 class="anchored" data-anchor-id="training-data-preparation-and-optimisation">Training data preparation and optimisation</h3>
+<p>Training data consists of lists of items with some partial order specified between items in each list.The goal of constructing the ranking model is to rank new, unseen lists in a similar way to rankings in the training data. Optimisation is performed using gradient descent algorithm.</p>
+</section>
+<section id="loss-function-the-key-to-ranking-performance" class="level3">
+<h3 class="anchored" data-anchor-id="loss-function-the-key-to-ranking-performance">Loss function: the key to ranking performance</h3>
+<p>The choice of the loss function is the distinctive element for Learning to Rank machine learning models. Examples of loss functions include mean squared error, binary cross entropy loss, and classification loss on pairs of documents.</p>
+</section>
+<section id="choosing-the-right-loss-function-mse-bcel-and-cl-explained" class="level3">
+<h3 class="anchored" data-anchor-id="choosing-the-right-loss-function-mse-bcel-and-cl-explained">Choosing the right loss function: MSE, BCEL, and CL Explained</h3>
+<p>When it comes to machine learning, the choice of loss function can make or break your model’s performance. This is especially true in Learning to Rank methods (LTR), where the goal is to rank items accurately based on their relevance. Let’s dive into three commonly used loss functions—Mean Squared Error (MSE), Binary Cross-Entropy Loss (BCEL), and Classification Loss (CL)—and understand their differences and applications.</p>
+<p><strong>Mean Squared Error (MSE)</strong></p>
+<p><strong>Definition</strong>: Mean Squared Error measures the average squared difference between the predicted values and the actual values. It’s a widely used loss function for regression tasks.</p>
+<p><strong>Formula</strong>:</p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231740462.png"><img src="images/image_2024-06-12_231740462.png" class="img-fluid"></a></p>
+<p>where \( y_i \) is the actual value and \( \hat{y}_i \) is the predicted value.</p>
+<p><strong>Use Case</strong>: MSE is particularly useful when you want your model to predict exact numerical values and is less effective for classification or ranking tasks where the focus is on relative order rather than exact predictions.</p>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li><p>Simple and intuitive.</p></li>
+<li><p>Penalises larger errors more heavily, which can lead to more precise predictions.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Sensitive to outliers, as large errors disproportionately affect the MSE.</li>
+</ul>
+<p><strong>Example</strong>: In a regression task predicting house prices, MSE helps ensure the predicted prices are as close as possible to the actual prices.</p>
+<p><strong>Binary Cross-Entropy Loss (BCEL)</strong></p>
+<p><strong>Definition</strong>: Binary Cross-Entropy Loss, also known as Log Loss, measures the performance of a classification model whose output is a probability value between 0 and 1. It’s commonly used for binary classification tasks.</p>
+<p><strong>Formula</strong>:</p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231807491.png"><img src="images/image_2024-06-12_231807491.png" class="img-fluid"></a></p>
+<p>where <strong>yi</strong> is the actual binary label (0 or 1) and <strong>y-hat</strong> is the predicted probability.</p>
+<p><strong>Use Case</strong>: BCEL is ideal for binary classification problems, including spam detection, medical diagnoses (e.g., disease vs.&nbsp;no disease), and learning to rank where each item is independently scored.</p>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li><p>Provides probability outputs, which can be useful for threshold-based decision making.</p></li>
+<li><p>Penalises confident but incorrect predictions more than less confident ones.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Can be sensitive to class imbalance if not handled properly.</li>
+</ul>
+<p><strong>Example</strong>: In a spam detection system, BCEL helps distinguish between spam and non-spam emails by outputting probabilities.</p>
+<p><strong>Classification Loss (CL)</strong></p>
+<p><strong>Definition</strong>: Classification Loss, often referred to in the context of pairwise ranking as hinge loss or pairwise logistic loss, focuses on the correct ranking order between pairs of items.</p>
+<p><strong>Pairwise Logistic Loss Formula</strong>:</p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231829764.png"><img src="images/image_2024-06-12_231829764.png" class="img-fluid"></a></p>
+<p>where <strong>si</strong> and <strong>sj</strong> are the scores of items <strong>i</strong> and <strong>j</strong>, respectively, and <strong>P</strong> is the set of item pairs.</p>
+<p><strong>Use Case</strong>: CL is particularly useful in learning to rank scenarios where the goal is to optimise the order of items based on their relevance, such as search engine results and recommendation systems.</p>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li><p>Directly optimises ranking performance by focusing on the relative order of items.</p></li>
+<li><p>Reduces the impact of outliers compared to MSE.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Requires careful selection of item pairs, which can be computationally intensive.</li>
+</ul>
+<p><strong>Example</strong>: In a search engine, CL ensures that more relevant documents are ranked higher than less relevant ones, improving the overall user experience.</p>
+<section id="choosing-the-right-loss-function" class="level4">
+<h4 class="anchored" data-anchor-id="choosing-the-right-loss-function">Choosing the Right Loss Function</h4>
+<ul>
+<li><p><strong>Use MSE</strong>: When your primary goal is to predict precise numerical values and the importance of each prediction is equal.</p></li>
+<li><p><strong>Use BCEL</strong>: When dealing with binary classification problems and you need probability outputs for further decision-making processes.</p></li>
+<li><p><strong>Use CL</strong>: When the task involves ranking items, and the primary objective is to get the order right rather than the exact scores.</p></li>
+</ul>
+<p>Each loss function has its strengths and specific use cases. Understanding the nuances of MSE, BCEL, and CL helps you choose the most appropriate one for your particular machine learning problem, leading to better model performance and more accurate predictions.</p>
+</section>
+</section>
+</section>
+<section id="approaches-to-learning-to-rank" class="level2">
+<h2 class="anchored" data-anchor-id="approaches-to-learning-to-rank">Approaches to Learning to Rank</h2>
+<section id="neural-network-based-and-gradient-based-methods" class="level3">
+<h3 class="anchored" data-anchor-id="neural-network-based-and-gradient-based-methods">Neural network-based and gradient-based methods</h3>
+<p><strong>RankNet</strong> uses Binary cross entropy loss where the model outputs probabilities using logistic function.</p>
+<p><strong>RankNet:</strong> Example in python</p>
+<pre><code>import torch
+import torch.nn as nn
+import torch.optim as optim
+
+class RankNet(nn.Module):
+    def __init__(self, input_size):
+        super(RankNet, self).__init__()
+        self.linear = nn.Linear(input_size, 1)
+        self.sigmoid = nn.Sigmoid()
+
+    def forward(self, x):
+        return self.sigmoid(self.linear(x))
+
+# Example usage
+input_size = 10
+model = RankNet(input_size)
+criterion = nn.BCELoss()
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+# Dummy data: pairs of documents with features and their relevance
+x1 = torch.rand((5, input_size))
+x2 = torch.rand((5, input_size))
+y = torch.tensor([1, 0, 1, 1, 0], dtype=torch.float32)  # 1 if x1 is more relevant than x2, else 0
+
+# Training loop
+for epoch in range(100):
+    optimizer.zero_grad()
+    s1 = model(x1)
+    s2 = model(x2)
+    p = s1 / (s1 + s2)
+    loss = criterion(p, y)
+    loss.backward()
+    optimizer.step()
+
+print(f'Trained RankNet Model: {model}')</code></pre>
+<p><strong>LambdaRank</strong> defines the gradients of an implicit loss function so that documents with high rank have much bigger gradients.ListNet proposes a new learning method for optimising the listwise loss function based on the top k probability.</p>
+<p>LambdaRank: Example in</p>
+</section>
+</section>
+<section id="overcoming-challenges-in-learning-to-rank" class="level2">
+<h2 class="anchored" data-anchor-id="overcoming-challenges-in-learning-to-rank">Overcoming Challenges in Learning to Rank</h2>
+<section id="position-bias-and-distributed-training" class="level3">
+<h3 class="anchored" data-anchor-id="position-bias-and-distributed-training">Position bias and distributed training</h3>
+<p>Position bias is a common issue in learning to rank, where user clicks are biased towards higher-ranked results.</p>
+<p>XGBoost implements the Unbiased LambdaMART algorithm to debias position-dependent click data. Distributed training is implemented with integration of multiple frameworks, including Dask, Spark, and PySpark.</p>
+</section>
+</section>
+<section id="evaluating-and-refining-ranking-models" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-and-refining-ranking-models">Evaluating and Refining Ranking Models</h2>
+<section id="metrics-for-ranking-performance-and-best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="metrics-for-ranking-performance-and-best-practices">Metrics for ranking performance and best practices</h3>
+<p>Evaluation measures include DCG, NDCG, MAP, MRR, and precision. The goal of constructing the ranking model is to rank new, unseen lists in a similar way to rankings in the training data.</p>
+<p>Selecting and designing good features is an important area in machine learning, which is called feature engineering.</p>
+<p>### Understanding Evaluation Measures: DCG, NDCG, MAP, MRR, and Precision</p>
+<p>Evaluating the performance of ranking models is crucial to ensure they meet the desired objectives. Different evaluation measures serve different purposes and provide various insights into how well your model ranks items. Let’s break down five commonly used evaluation measures: Discounted Cumulative Gain (DCG), Normalized DCG (NDCG), Mean Average Precision (MAP), Mean Reciprocal Rank (MRR), and Precision.</p>
+<p><strong>Discounted Cumulative Gain (DCG)</strong></p>
+<p><strong>Definition</strong>: DCG is a measure of ranking quality that evaluates the relevance of a document based on its position in the result list. The gain is accumulated from the top of the list to the bottom, with the gain of each result discounted at lower ranks.</p>
+<p><strong>Formula</strong>:</p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231845222.png"><img src="images/image_2024-06-12_231845222.png" class="img-fluid"></a></p>
+<p>where <strong>rel-i</strong> is the relevance score of the result at position <strong>i</strong>.</p>
+<p><strong>Use Case</strong>: DCG is useful for evaluating the relevance of documents retrieved by search engines, where higher-ranked documents are more important.</p>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li><p>Takes into account the position of relevant documents.</p></li>
+<li><p>Higher relevance scores at the top of the list have a larger impact.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Raw DCG scores can be difficult to interpret without normalization.</li>
+</ul>
+<p><strong>Normalized Discounted Cumulative Gain (NDCG)</strong></p>
+<p><strong>Definition</strong>: NDCG normalizes the DCG score, making it easier to compare across different queries with varying numbers of results and relevance scales. NDCG is typically used to evaluate the performance of a search engine or recommendation system.</p>
+<p><strong>Formula</strong>:</p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231855745.png"><img src="images/image_2024-06-12_231855745.png" class="img-fluid"></a></p>
+<p>where IDCG is the ideal DCG, which is the maximum possible DCG score for a perfect ranking.</p>
+<p><strong>Use Case</strong>: NDCG is ideal for comparing the effectiveness of different ranking algorithms on the same dataset.</p>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li><p>Provides a normalized score between 0 and 1, facilitating easier comparison.</p></li>
+<li><p>Reflects the quality of the ranking across different queries.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Requires calculation of the ideal ranking (IDCG).</li>
+</ul>
+<p><strong>Mean Average Precision (MAP)</strong></p>
+<p><strong>Definition</strong>: MAP calculates the mean of the average precision scores for each query. Average Precision (AP) is the average of precision values at the ranks where relevant documents appear.</p>
+<p><strong>Formula</strong>:</p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231909481.png"><img src="images/image_2024-06-12_231909481.png" class="img-fluid"></a></p>
+<p>where <strong>Q</strong> is the number of queries and \( \text{AP}(q) \) is the average precision for query \( q \).</p>
+<p><strong>Use Case</strong>: MAP is commonly used in information retrieval tasks to evaluate the overall precision of a ranking system across multiple queries.</p>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li><p>Combines precision across all relevant documents.</p></li>
+<li><p>Provides a single score to evaluate the performance across multiple queries.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Sensitive to the number of relevant documents per query.</li>
+</ul>
+<p><strong>Mean Reciprocal Rank (MRR)</strong></p>
+<p><strong>Definition</strong>: MRR measures the average of the reciprocal ranks of the first relevant document for a set of queries. It focuses on how early the first relevant document appears in the ranking.</p>
+<p><strong>Formula</strong>:</p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231922141.png"><img src="images/image_2024-06-12_231922141.png" class="img-fluid"></a></p>
+<p>where <strong>rankq</strong> is the rank position of the first relevant document for query <strong>q</strong>.</p>
+<p><strong>Use Case</strong>: MRR is useful when the primary goal is to find the first relevant result quickly.</p>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li><p>Simple and intuitive.</p></li>
+<li><p>Highlights the importance of early relevant documents.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Only considers the first relevant document, ignoring the rest.</li>
+</ul>
+<p><strong>Precision</strong></p>
+<p><strong>Definition</strong>: Precision measures the proportion of relevant documents among the retrieved documents. It’s a fundamental measure in information retrieval.</p>
+<p><strong>Formula</strong>:</p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/image_2024-06-12_231931765.png"><img src="images/image_2024-06-12_231931765.png" class="img-fluid"></a></p>
+<p><strong>Use Case</strong>: Precision is essential when the focus is on the accuracy of the retrieved documents rather than their ranking.</p>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li><p>Easy to understand and compute.</p></li>
+<li><p>Directly measures retrieval accuracy.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li><p>Does not account for the position of relevant documents.</p></li>
+<li><p>Can be misleading if used alone, as it ignores recall (the proportion of relevant documents that are retrieved).</p></li>
+</ul>
+<p><strong>Summary</strong></p>
+<ul>
+<li><p><strong>DCG</strong>: Measures ranking quality considering the position of relevant documents.</p></li>
+<li><p><strong>NDCG</strong>: Normalised version of DCG for easier comparison.</p></li>
+<li><p><strong>MAP</strong>: Mean of average precision scores across multiple queries, combining precision across all relevant documents.</p></li>
+<li><p><strong>MRR</strong>: Focuses on the rank of the first relevant document.</p></li>
+<li><p>P<strong>recision</strong>: Proportion of relevant documents among retrieved documents.</p></li>
+</ul>
+<p>Each evaluation measure provides unique insights, and choosing the right one depends on the specific objectives and requirements of your application. Combining these metrics can offer a more comprehensive evaluation of your ranking system’s effectiveness.</p>
+</section>
+</section>
+<section id="recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="recommendations">Recommendations</h2>
+<p>If you are looking for other machine learning articles, you might also find this one interesting:</p>
+<p><img src="images/customer_reviews_forensics.png" class="img-fluid"></p>
+<section id="customer-reviews-forensics-an-approach-to-stunning-expert-insights" class="level3">
+<h3 class="anchored" data-anchor-id="customer-reviews-forensics-an-approach-to-stunning-expert-insights">Customer Reviews Forensics: An Approach To Stunning Expert Insights</h3>
+<p>Customer Reviews: Why They Matter In a competitive market understanding customer reviews is crucial for enhancing product offerings and customer satisfaction. This article outlines an analysis of user reviews from a leading software provider, focusing on methodological approaches to dissect user sentiment and providing strategic recommendations. The Data Source The dataset used for this analysis contains reviews from Google. The key fields include: Customer Reviews: Methodology Used The dataset comprised user reviews, complete with ratings, text feedback, and other reviewer demographics. The analysis followed these steps: Customer Reviews: Findings Positive Feedback Analysis showed that satisfied users frequently highlighted several aspects: […]</p>
+<p><a href="https://viscioletti.com/2024/01/peak-performance-modeling-harnessing-bagging-and-boosting-for-superior-results/"></a></p>
+</section>
+</section>
+<section id="lets-connect" class="level2">
+<h2 class="anchored" data-anchor-id="lets-connect">Let’s Connect</h2>
+<p>I’d love to hear your thoughts on this fascinating topic!</p>
+<p>Feel free to connect with me on Twitter at <a href="https://twitter.com/feddernico">https://twitter.com/feddernico</a> or explore more of my content on Medium <a href="https://medium.com/@federico.viscioletti">https://medium.com/<span class="citation" data-cites="federico.viscioletti">@federico.viscioletti</span></a> and Substack <a href="https://feddernico.substack.com/">https://feddernico.substack.com</a></p>
+<p>Happy learning!</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Content licensed under CC BY 4.0</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

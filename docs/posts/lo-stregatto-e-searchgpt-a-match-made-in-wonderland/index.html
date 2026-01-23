@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Federico Viscioletti">
+<meta name="dcterms.date" content="2025-01-16">
+
+<title>Lo Stregatto E SearchGPT: A Match Made In Wonderland – Viscioletti</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-26827f95213357c060b998e0666f8ebe.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Viscioletti</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/feddernico"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/feddernico"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Lo Stregatto E SearchGPT: A Match Made In Wonderland</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Federico Viscioletti </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 16, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Con questo post inauguro la rubrica di YouTube digest, in cui prendo le live più interessanti che ho visto nelle scorse settimane e cerco di sintetizzare i concetti più importanti espressi nella live stessa. In questo episodio diamo uno sguardo alla live del canale di Piero Savastano dal titolo “Rifacciamo SearchGPT da zero con lo Stregatto”, in cui viene trattata la funzionalità SearchGPT, una funzionalità già implementata da ChatGPT e Perplexity.<br>
+Questa tecnica permette di cercare online contenuti inerenti il prompt utente e usarlo per arricchire la base dati dal quale il modello attinge per fornire una risposta.</p>
+<section id="introduzione" class="level2">
+<h2 class="anchored" data-anchor-id="introduzione">Introduzione</h2>
+<p>Lo Stregatto è un progetto open source ideato da Piero Savastano. La sua intuizione è quella di voler costruire per il mondo della generative AI quello che Wordpress rappresenta per il mondo degli sviluppatori web: una piattaforma che aiuti ad astrarre dal livello sottostante (librerie come LangChain) col quale costruire plugin ed applicazioni web LLM based.</p>
+<figure class="figure">
+<p><a href="https://viscioletti.com/wp-content/uploads/2025/01/image.png"><img src="images/image.png" class="img-fluid figure-img"></a></p>
+<figcaption>
+<p>L’interfaccia dello Stregatto</p>
+</figcaption>
+</figure>
+<p>La live è nasce dall’annuncio di OpenAI dell’introduzione di SearchGPT, la funzionalità che permette a chatGPT di fare ricerche sul web e utilizzare i risultati di tali ricerche all’interno del language model.</p>
+<p>La lunga live (oltre 5 ore) è l’occasione di presentare lo Stregatto e dimostrare che con le funzionalità messe a disposizione della piattaforma è possibile ricreare le stesse funzionalità ed avere a disposizione un SearchGPT open source.</p>
+</section>
+<section id="cronologia-degli-eventi-principali" class="level2">
+<h2 class="anchored" data-anchor-id="cronologia-degli-eventi-principali">Cronologia degli Eventi Principali</h2>
+<section id="introduzione-e-avvio-della-discussione" class="level3">
+<h3 class="anchored" data-anchor-id="introduzione-e-avvio-della-discussione">Introduzione e Avvio della Discussione</h3>
+<ul>
+<li><p><strong>Inizio della Discussione&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=11640s">Vai al punto sul video</a>:</strong>&nbsp;Si avvia una<br>
+conversazione informale tra Piero e Luca. Piero esprime<br>
+l’intenzione di rompere gli schemi e mostrare le capacità di<br>
+sviluppo di un sistema come ChatGPT Search, menzionando anche<br>
+Perplexity come player nel settore. Si introduce l’idea di una<br>
+collaborazione e di dimostrare competenze nel campo.</p></li>
+<li><p><strong>Differenza tra Language Model e World Model&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=15720s">Vai al punto sul video</a>:</strong>&nbsp;Piero spiega la differenza tra un language model,<br>
+addestrato su grandi quantità di testo, e un world model,<br>
+sottolineando che il primo non ha una conoscenza del mondo reale in<br>
+tempo reale.</p></li>
+<li><p><strong>Ringraziamento alla Community del “Gatto”&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=29340s">Vai al punto sul video</a>:</strong>&nbsp;Piero ringrazia la community del “Gatto” per la<br>
+disponibilità dell’hardware e riconosce la competenza e<br>
+l’importanza della partecipazione di tutti. Critica<br>
+l’atteggiamento arrendevole nei confronti delle nuove tecnologie,<br>
+specialmente nell’ambito dell’IA.</p></li>
+</ul>
+<figure class="figure">
+<p><a href="https://viscioletti.com/wp-content/uploads/2025/01/image-2.png"><img src="images/image-2-1024x964.png" class="img-fluid figure-img"></a></p>
+<figcaption>
+<p>Le varie componenti dello Stregatto</p>
+</figcaption>
+</figure>
+</section>
+<section id="tecniche-e-concetti-chiave-sui-modelli-di-ia" class="level3">
+<h3 class="anchored" data-anchor-id="tecniche-e-concetti-chiave-sui-modelli-di-ia">Tecniche e Concetti Chiave sui Modelli di IA</h3>
+<ul>
+<li><p><strong>Spiegazione del Language Model “Stregatto”&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=66540s">Vai al punto sul video</a>:</strong>&nbsp;Viene spiegato il funzionamento dello Stregatto come un<br>
+language model che opera su token in un ciclo continuo per<br>
+completare il testo.</p></li>
+<li><p><strong>Introduzione del concetto di RAG (Retrieval Augmented<br>
+Generation)&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=73440s">Vai al punto sul video</a>:</strong>&nbsp;Si introduce la tecnica RAG come<br>
+metodo per migliorare le risposte dei language model, prendendo<br>
+spunto dall’esperienza di uno studente che cerca informazioni nelle<br>
+proprie conoscenze per rispondere a una domanda.</p></li>
+<li><p><strong>Discussione sull’Intelligenza dei Language Model&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=86100s">Vai al punto sul video</a>:</strong>&nbsp;Viene aperto un dibattito sull’intelligenza dei language<br>
+model e sulla loro relazione con creatività, ragionamento e verità.<br>
+Si parla dell’hype attorno al settore dell’IA e degli investimenti<br>
+finanziari.</p></li>
+<li><p><strong>Addestramento degli LLM e il Ruolo delle GPU&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=94020s">Vai al punto sul video</a>:</strong>&nbsp;Antonio spiega come vengono addestrati gli LLM con forza<br>
+bruta e con l’uso di GPU, sottolineando l’inefficienza<br>
+dell’utilizzo di queste ultime per tale scopo. Si ipotizza<br>
+l’avvento di hardware dedicato per l’addestramento (esic) come già<br>
+successo nel mondo del bitcoin mining.</p></li>
+<li><p><strong>Fine Tuning e Inferenza&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=106800s">Vai al punto sul video</a>:</strong>&nbsp;Si spiega la<br>
+differenza tra il training di un modello che avviene raramente e il<br>
+fine tuning, più frequente e il processo di inferenza ovvero l’uso<br>
+dei LLM. Si sottolinea l’inefficienza delle GPU anche per<br>
+l’inferenza.</p></li>
+</ul>
+</section>
+<section id="hardware-e-ottimizzazione" class="level3">
+<h3 class="anchored" data-anchor-id="hardware-e-ottimizzazione">Hardware e Ottimizzazione</h3>
+<ul>
+<li><p><strong>NPU (Neural Processing Unit) e Consumo Energetico&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=110040s">Vai al punto sul video</a>:</strong>&nbsp;Si parla delle NPU come alternative più efficienti delle<br>
+GPU per l’inferenza, con un significativo risparmio<br>
+energetico.</p></li>
+<li><p><strong>Modelli a 1 Bit e a Virgola Mobile&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=114540s">Vai al punto sul video</a>:</strong><br>
+Viene introdotto il concetto di modelli a 1 bit come alternativa ai<br>
+modelli a virgola mobile, con l’obiettivo di ottimizzare<br>
+l’efficienza.</p></li>
+<li><p><strong>Spiegazione del Cambiamento di Fase delle Reti Neurali<br>
+<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=126780s">Vai al punto sul video</a>:</strong>&nbsp;Si discute come la scalabilità delle reti neurali<br>
+abbia portato a un cambiamento di fase nel loro comportamento.</p></li>
+</ul>
+<figure class="figure">
+<p><a href="https://viscioletti.com/wp-content/uploads/2025/01/image-4.png"><img src="images/image-4.png" class="img-fluid figure-img"></a></p>
+<figcaption>
+<p>Pannello di Admin delle memorie (RAG)</p>
+</figcaption>
+</figure>
+</section>
+<section id="costruzione-di-un-sistema-basato-su-language-model" class="level3">
+<h3 class="anchored" data-anchor-id="costruzione-di-un-sistema-basato-su-language-model">Costruzione di un Sistema Basato su Language Model</h3>
+<ul>
+<li><p><strong>Componenti per Costruire un Sistema simile&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=134940s">Vai al punto sul video</a>:</strong>&nbsp;Luca descrive le principali componenti necessarie per<br>
+costruire un sistema basato su language model: speech-to-text,<br>
+database (tradizionale o vettoriale), e il modello<br>
+linguistico.</p></li>
+<li><p><strong>Spiegazione del Database Vettoriale&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=151680s">Vai al punto sul video</a>:</strong><br>
+Nicola spiega il concetto di database vettoriale, evidenziando come<br>
+memorizza e indicizza il testo attraverso embedding. Vengono<br>
+menzionate diverse tipologie di DB vettoriali tra cui<br>
+quadrant.</p></li>
+<li><p><strong>Confronto tra DB Vettoriali e DB a Grafi&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=161040s">Vai al punto sul video</a>:</strong>&nbsp;Si confrontano le caratteristiche e le problematiche dei<br>
+DB vettoriali e dei DB a grafo, sottolineando che l’uno non è<br>
+necessariamente meglio dell’altro in tutti i casi.</p></li>
+</ul>
+</section>
+<section id="coinvolgimento-della-community-e-opportunità" class="level3">
+<h3 class="anchored" data-anchor-id="coinvolgimento-della-community-e-opportunità">Coinvolgimento della Community e Opportunità</h3>
+<ul>
+<li><p><strong>Invito a Partecipare e Costruire in Prima Persona&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=172260s">Vai al punto sul video</a>:</strong>&nbsp;Viene ribadita l’importanza di non farsi “prendere in<br>
+giro” dalle grandi aziende e di costruire questi sistemi in prima<br>
+persona, come un gioco di costruzioni (tipo LEGO), sottolineando il<br>
+potenziale di protagonismo anche nel contesto italiano.</p></li>
+<li><p><strong>Introduzione della Scuola “Profession AI”&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=181020s">Vai al punto sul video</a>:</strong>&nbsp;Viene menzionata la scuola “Profession AI” come esempio<br>
+di realtà che promuove il talento italiano nel settore dell’IA, con<br>
+la partecipazione di Giuseppe e lo sviluppo di progetti basati sullo<br>
+Stregatto.</p></li>
+<li><p><strong>Citazione sul Caso d’Uso dello Stregatto in Ambito<br>
+Formativo&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=192420s">Vai al punto sul video</a>:</strong>&nbsp;Giuseppe, proprietario di una scuola<br>
+online, descrive come ha utilizzato l’intelligenza artificiale e lo<br>
+Stregatto per migliorare l’esperienza formativa degli studenti,<br>
+evidenziando la sperimentazione di diversi approcci.</p></li>
+</ul>
+<figure class="figure">
+<p><a href="https://viscioletti.com/wp-content/uploads/2025/01/image-3.png"><img src="images/image-3.png" class="img-fluid figure-img"></a></p>
+<figcaption>
+<p>I plugin disponibili nello Stregatto</p>
+</figcaption>
+</figure>
+</section>
+<section id="coding-live-e-sviluppo-di-plugin-searchgpt" class="level3">
+<h3 class="anchored" data-anchor-id="coding-live-e-sviluppo-di-plugin-searchgpt">Coding Live e Sviluppo di Plugin (SearchGPT)</h3>
+<ul>
+<li><p><strong>Inizio del Coding Live&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=212760s">Vai al punto sul video</a>:</strong>&nbsp;Piero annuncia<br>
+l’inizio della sessione di coding live, con l’obiettivo di creare<br>
+un setup minimale del gatto con un plugin personalizzato, con la<br>
+creazione di un docker.</p></li>
+<li><p><strong>Spiegazione e installazione dello Stregatto&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=3982s">Vai al punto sul video</a>:</strong>&nbsp;Piero introduce e installa lo Stregatto, evidenziando la<br>
+sua natura di web server e spiegando i suoi endpoint.</p></li>
+<li><p><strong>Introduzione ai Plugin dello Stregatto&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=5598s">Vai al punto sul video</a>:</strong>&nbsp;Viene spiegata la struttura dei plugin e il loro<br>
+utilizzo come framework per costruire con il linguaggio<br>
+naturale.</p></li>
+<li><p><strong>Modifica del Plugin per l’Output di Risposta&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=6549s">Vai al punto sul video</a>:</strong>&nbsp;Il plugin viene modificato per sovrascrivere<br>
+completamente la risposta del gatto, dimostrando la possibilità di<br>
+personalizzare il comportamento del sistema.</p></li>
+<li><p><strong>Accesso alla Memoria e al Language Model&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=6663s">Vai al punto sul video</a>:</strong>&nbsp;Vengono spiegate le modalità di accesso alla memoria e<br>
+al language model tramite il plugin.</p></li>
+<li><p><strong>Test del Plugin Modificato&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=7078s">Vai al punto sul video</a>:</strong>&nbsp;Il<br>
+plugin modificato viene testato, dimostrando la sua capacità di<br>
+aggiungere una risposta personalizzata a quella originale del<br>
+language model.</p></li>
+</ul>
+</section>
+<section id="nuovi-ospiti-e-integrazioni" class="level3">
+<h3 class="anchored" data-anchor-id="nuovi-ospiti-e-integrazioni">Nuovi Ospiti e Integrazioni</h3>
+<ul>
+<li><p><strong>Arrivo di Nuovi Ospiti: Andrea e Silvio&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=10919s">Vai al punto sul video</a>:</strong>&nbsp;Luca e Piero introducono Andrea, autore del primo plugin<br>
+ufficiale per lo Stregatto, e Silvio, un personaggio molto noto<br>
+nella community italiana.</p></li>
+<li><p><strong>Integrazione dell’API di ricerca Google&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=11598s">Vai al punto sul video</a>:</strong>&nbsp;Piero inizia a integrare l’API di ricerca Google<br>
+all’interno del plugin.</p></li>
+<li><p><strong>Discussione su Come Migliorare il Sistema&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=12086s">Vai al punto sul video</a>:</strong>&nbsp;I partecipanti, Luca, Andrea, Massimo, Marco, Emanuele<br>
+discutono come migliorare il sistema, introducendo il tema della<br>
+citazione delle fonti e della gestione del contesto.</p></li>
+</ul>
+</section>
+<section id="opportunità-di-business-nellia" class="level3">
+<h3 class="anchored" data-anchor-id="opportunità-di-business-nellia">Opportunità di Business nell’IA</h3>
+<ul>
+<li><p><strong>Intervento di Emiliano sull’Impresa nel Mondo dell’IA<br>
+<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=12791s">Vai al punto sul video</a>:</strong>&nbsp;Emiliano discute sulle opportunità di<br>
+business nel mondo dell’IA, sottolineando l’importanza della<br>
+verticalizzazione e dell’innovazione per non essere sopraffatti dai<br>
+grandi player.</p></li>
+<li><p><strong>Verticalizzazione dei Tool di IA e Economia dei Dati<br>
+<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=13303s">Vai al punto sul video</a>:</strong>&nbsp;Massimo approfondisce la questione della<br>
+verticalizzazione degli strumenti di IA e di dove i dati vengono<br>
+reperiti, sottolineando l’importanza di un approccio critico e<br>
+consapevole nell’utilizzo di dati spesso non pubblici.</p></li>
+<li><p><strong>Microsoft Azure e il Vendor Lock-In&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=13808s">Vai al punto sul video</a>:</strong><br>
+Si discute l’attrattiva di servizi come Microsoft Azure, ma si<br>
+mette in guardia dal rischio di vendor lock-in.</p></li>
+<li><p><strong>Strumenti Generalisti vs Soluzioni Verticali&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=13970s">Vai al punto sul video</a>:</strong>&nbsp;Viene evidenziata la differenza tra strumenti<br>
+generalisti come ChatGPT e la necessità di soluzioni verticali per<br>
+casi specifici.</p></li>
+</ul>
+</section>
+<section id="sviluppo-e-test-del-nuovo-plugin-searchgpt" class="level3">
+<h3 class="anchored" data-anchor-id="sviluppo-e-test-del-nuovo-plugin-searchgpt">Sviluppo e Test del Nuovo Plugin SearchGPT</h3>
+<ul>
+<li><p><strong>Importanza dell’Interfaccia Utente&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=14087s">Vai al punto sul video</a>:</strong><br>
+Si sottolinea che l’interfaccia utente è fondamentale per<br>
+l’utilizzo degli strumenti di intelligenza artificiale.</p></li>
+<li><p><strong>Spiegazione del codice e recupero dei risultati della<br>
+query&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=14107s">Vai al punto sul video</a>:</strong>&nbsp;Piero spiega nel dettaglio il codice<br>
+che consente di effettuare una query al motore di ricerca e<br>
+recuperare i risultati e il testo da essi ricavato.</p></li>
+<li><p><strong>Integrazione delle Fonti Nel Prompt&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=14684s">Vai al punto sul video</a>:</strong><br>
+Piero integra le fonti ricavate dal motore di ricerca nel prompt del<br>
+language model.</p></li>
+<li><p><strong>Discussione sulla Qualità della Risposta&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=15514s">Vai al punto sul video</a>:</strong>&nbsp;I partecipanti discutono dei problemi di risposta del<br>
+language model.</p></li>
+<li><p><strong>Correzione e Test del Nuovo Plugin&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=15802s">Vai al punto sul video</a>:</strong><br>
+Piero corregge i problemi nel codice e testa il plugin con il nuovo<br>
+prompt, con la partecipazione di Carina.</p></li>
+</ul>
+</section>
+<section id="discussioni-finali-e-conclusioni" class="level3">
+<h3 class="anchored" data-anchor-id="discussioni-finali-e-conclusioni">Discussioni Finali e Conclusioni</h3>
+<ul>
+<li><p><strong>Discussione su un Uso Ansiogeno del Sistema&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=16371s">Vai al punto sul video</a>:</strong>&nbsp;Viene introdotta l’idea di un utilizzo “ansiogeno”<br>
+del sistema, in cui la risposta del sistema viene fornita con un<br>
+tono un po’ preoccupante e ansioso.</p></li>
+<li><p><strong>Dibattito sulla Apertura di un’Agenzia di IA&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=17312s">Vai al punto sul video</a>:</strong>&nbsp;Si discute sulla fattibilità e sulla sostenibilità<br>
+economica dell’apertura di una agenzia di IA.</p></li>
+<li><p><strong>Analisi dell’Utilizzo della IA in Contesti Specifici<br>
+<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=18850s">Vai al punto sul video</a>:</strong>&nbsp;Si discutono vari casi d’uso concreti per<br>
+questi sistemi, tra cui il customer support e l’integrazione di<br>
+knowledge base specifiche.</p></li>
+<li><p><strong>Verticalizzazione, il futuro&nbsp;<a href="https://www.youtube.com/watch?v=WmZAs3NTNz0&amp;t=19268s">Vai al punto sul video</a>:</strong>&nbsp;Viene<br>
+sottolineata l’importanza della verticalizzazione e della<br>
+customizzazione come strada per non essere spazzati via dai grandi<br>
+player e raggiungere contesti specifici.</p></li>
+</ul>
+</section>
+</section>
+<section id="chi-è-intervenuto-nella-live" class="level2">
+<h2 class="anchored" data-anchor-id="chi-è-intervenuto-nella-live">Chi è intervenuto nella live</h2>
+<ul>
+<li><p><strong>Piero Savastano:</strong>&nbsp;È l’organizzatore e principale relatore. Guida<br>
+la discussione, spiega i concetti tecnici e programma il plugin in<br>
+diretta. Appassionato di tecnologia, con un approccio pratico e<br>
+orientato all’azione, promuove la costruzione di soluzioni IA<br>
+“fatte in casa” e l’importanza della community.</p></li>
+<li><p><strong>Luca:</strong>&nbsp;Collaboratore di Piero, contribuisce alla<br>
+discussione con punti di vista tecnici e funzionali, ponendo domande<br>
+pertinenti e fornendo supporto pratico.</p></li>
+<li><p><strong>Nicola:</strong>&nbsp;Esperto di database vettoriali e di tecniche<br>
+RAG. Apporta una conoscenza approfondita su questi temi, spiegando i<br>
+concetti chiave e le implicazioni pratiche.</p></li>
+<li><p><strong>Antonio:</strong>&nbsp;Esperto di elettronica ed hardware, fornisce<br>
+una prospettiva sul funzionamento delle reti neurali,<br>
+sull’efficienza delle GPU e sulle possibili evoluzioni nel campo<br>
+dell’hardware dedicato.</p></li>
+<li><p><strong>Giuseppe:</strong>&nbsp;Esperto di programmazione web e educazione<br>
+online, descrive come utilizza l’IA e lo Stregatto nei suoi corsi,<br>
+fornendo un esempio concreto di applicazione pratica.</p></li>
+<li><p><strong>Emiliano:</strong>&nbsp;Imprenditore e divulgatore, condivide una<br>
+visione orientata al business e alle opportunità di mercato nel<br>
+settore dell’IA, sottolineando l’importanza della<br>
+verticalizzazione.</p></li>
+<li><p><strong>Massimo:</strong>&nbsp;Appassionato di intelligenza artificiale e<br>
+divulgatore, fornisce spunti di riflessione sulle implicazioni<br>
+economiche e sulla gestione dei dati nel settore.</p></li>
+<li><p><strong>Marco:</strong>&nbsp;Partecipante attivo alla discussione, apporta<br>
+punti di vista tecnici e funzionali, offrendo idee per migliorare il<br>
+sistema e sottolineando il ruolo della community.</p></li>
+<li><p><strong>Andrea:</strong>&nbsp;Autore del primo plugin ufficiale per lo<br>
+Stregatto, apporta un contributo tecnico e pratico<br>
+all’iniziativa.</p></li>
+<li><p><strong>Silvio:</strong>&nbsp;Personaggio noto nella community, si unisce alla<br>
+sessione fornendo un contributo dinamico e leggero.</p></li>
+<li><p><strong>Carina:</strong>&nbsp;Partecipante che segue la discussione con<br>
+entusiasmo, anche se non direttamente coinvolta nello sviluppo,<br>
+apporta una prospettiva diversa e stimolante.</p></li>
+<li><p><strong>Elvis:</strong>&nbsp;Utente che partecipa alla discussione, portando<br>
+una prospettiva più pratica e meno tecnica focalizzata sugli use<br>
+case.</p></li>
+<li><p><strong>Filippo:</strong>&nbsp;Utente che pone una domanda a Piero e<br>
+contribuisce alla discussione.</p></li>
+<li><p><strong>Samuele:</strong>&nbsp;Utente che partecipa alla discussione con<br>
+spunti e suggerimenti tecnici, evidenziando la sua conoscenza del<br>
+progetto.</p></li>
+</ul>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Content licensed under CC BY 4.0</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
