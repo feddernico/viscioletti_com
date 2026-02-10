@@ -4,7 +4,42 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "I am a Lead AI Engineer based in London, with several years of experience turning complex data into clear, actionable decisions for businesses in telecommunications, media, maritime intelligence and workforce planning.\nMy background is in statistics and decision-making, and I enjoy building end‑to‑end analytic solutions: from data pipelines and modelling through to stakeholder‑friendly stories and presentations."
+  },
+  {
+    "objectID": "about.html#what-i-do",
+    "href": "about.html#what-i-do",
+    "title": "About",
+    "section": "What I do",
+    "text": "What I do\n\nLead data science teams and mentor junior colleagues, with a focus on high‑impact projects that influence commercial and product strategy.\n\nDesign, build, and deploy predictive models (churn, downgrade, uplift, recommendation, forecasting) that support marketing, pricing, and customer experience decisions.\n\nDevelop data products and pipelines in Python, SQL, and cloud environments to automate manual work and make advanced analytics sustainable at scale.\n\nPartner with non‑technical stakeholders to frame business problems, translate them into statistical questions, and communicate results in a way that drives decisions."
+  },
+  {
+    "objectID": "about.html#recent-roles",
+    "href": "about.html#recent-roles",
+    "title": "About",
+    "section": "Recent roles",
+    "text": "Recent roles\n\nLead AI Engineer at Orgvue, where I evaluate the reliability and accuracy of AI agents, making sure they can reliably be deployed in production and monitored accordingly.\nSenior Data Scientist & Team Lead at Lloyd’s List Intelligence, where I created and now lead the data science team, internalised key third‑party models, and improved model performance with new pipelines and automation.\n\nSenior Data Scientist at Sky UK, working on downgrade prediction, uplift modelling for discount strategies, and mobile product strategy, while managing small teams and individuals.\n\nData Scientist at Vodafone UK, delivering cloud‑based data products, recommendation systems, and churn/propensity models across the consumer customer base.\n\nEarlier in my career, I worked across consulting, banking, iGaming, and manufacturing, delivering projects in BI, fraud detection, forecasting, and text mining."
+  },
+  {
+    "objectID": "about.html#skills-and-tools",
+    "href": "about.html#skills-and-tools",
+    "title": "About",
+    "section": "Skills and tools",
+    "text": "Skills and tools\nFrom a technical perspective, I work across:\n\nStatistics and modelling: regression, classification, uplift modelling, segmentation, multivariate analysis, forecasting, A/B testing, optimisation, and operational research.\n\nData work: data manipulation, data visualisation, and the design of robust analytical datasets.\n\nLanguages and tools: Python, R, SQL, SAS (Base, DI Studio, Enterprise Guide, Enterprise Miner, Forecast Studio, Visual Analytics), as well as experience with JavaScript‑based visualisation (D3.js, AngularJS), and tools like Matlab and SPSS.\n\nEqually important to me are soft skills: project and stakeholder management, mentoring, communication, and a positive, collaborative way of working."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\nI hold an MSc in Statistics and Decision‑making and a BSc in Statistics and Information Technology from the University of Rome “La Sapienza”, where I focused on stochastic processes, machine learning, predictive modelling, and multivariate statistics."
+  },
+  {
+    "objectID": "about.html#follow-me",
+    "href": "about.html#follow-me",
+    "title": "About",
+    "section": "Follow me",
+    "text": "Follow me\nIf you are interested in data science, causal inference, uplift modelling, or applied statistics in industry, this blog is where I share ideas, experiments, and lessons learned along the way."
   },
   {
     "objectID": "posts/how-to-handle-missing-data-in-machine-learning-part-1/index.html",
