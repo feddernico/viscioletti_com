@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Federico Viscioletti">
-<meta name="dcterms.date" content="2023-01-22">
 
-<title>Conditional statements in SAS Base – Viscioletti</title>
+<title>ink – Viscioletti</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,19 +70,19 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Viscioletti</span>
     </a>
   </div>
@@ -95,12 +93,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../ink.html"> 
-<span class="menu-text">ink.html</span></a>
+    <a class="nav-link active" href="./ink.html" aria-current="page"> 
+<span class="menu-text">ink</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/feddernico"> <i class="bi bi-github" role="img">
@@ -120,254 +118,77 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Conditional statements in SAS Base</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">base-sas</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Federico Viscioletti </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">January 22, 2023</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
-
-
-
-
-<p>After getting familiar with the rudiments of Base SAS, in this article we will deal with how to handle&nbsp;<strong>conditional statements</strong>.</p>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This type of construct allows you to execute a certain portion of code rather than another, once a condition has been evaluated.<br>
-To better understand the concept set out above, which could be new for those who are not accustomed to programming, let’s start with a simple example.&nbsp;This is a classic case where conditional statements enter our daily life.&nbsp;Suppose we have to cook some pasta, we know that we can throw the pasta into the pot with the water only if it reaches boiling temperature, i.e.&nbsp;100°C.</p>
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2015/12/cooking-pasta.jpg"><img src="images/cooking-pasta-300x200.jpg" class="img-fluid figure-img"></a></p>
-<figcaption>butta la pasta</figcaption>
-</figure>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ink</h1>
 </div>
-<figcaption>
-<p>If water boils… it’s time to drop the pasta!</p>
-</figcaption>
-</figure>
-<p>So, let’s try to write the conditional statement in pseudocode that formalizes the case outlined above:</p>
-<pre><code>IF WaterTemperature &gt;= 100 THEN
-    Butta la pasta nella pentola
-ENDIF</code></pre>
-<p>This is therefore the simplest possible case: an if with a&nbsp;<strong>single statement</strong>&nbsp;and no else branch.&nbsp;In this case, in fact, it is necessary to carry out an action, to throw the pasta into the pot, only and only when the water has reached boiling temperature.&nbsp;Since there is no else branch in the construct, if the condition doesn’t occur we won’t have to do anything, or in our case wait for the water to reach boiling temperature, also because I’m starting to get hungry!</p>
-</section>
-<section id="conditional-statements-in-sas" class="level2">
-<h2 class="anchored" data-anchor-id="conditional-statements-in-sas">Conditional statements in SAS</h2>
-<p>So let’s go on to formalize and generalize concepts introduced through the practical example in SAS Base.&nbsp;In SAS, there are several ways to express a conditional statement, depending on the particular need:</p>
-<ul>
-<li>If with&nbsp;<strong>single statement</strong>&nbsp;, with and without branch else: There<br>
-is only one statement to be executed if the condition is evaluated as true.&nbsp;The case in which the condition is evaluated as false need not necessarily be contemplated.<br>
-Without else branch:</li>
-</ul>
-<pre><code>if condizione then
-    istruzione-se-condizione-vera;</code></pre>
-<ul>
-<li>Con ramo else:</li>
-</ul>
-<pre><code>if condizione then
-    istruzione-se-condizione-vera;
-else
-    istruzione-se-condizione-falsa;</code></pre>
-<ul>
-<li>If with <strong>multiple statements</strong>, with and without branch else: There is only one statement to be executed if the condition&nbsp;is evaluated as true.&nbsp;The case in which the condition is evaluated as false need not necessarily be contemplated.<br>
-With else branch:</li>
-</ul>
-<pre><code>if condizione then do;
-    istruzione-1-se-condizione-vera;
-    istruzione-2-se-condizione-vera;
-    ...
-    istruzione-n-se-condizione-vera;
-end;
-else do;
-    istruzione-1-se-condizione-falsa;
-    istruzione-2-se-condizione-falsa;
-    ...
-    istruzione-n-se-condizione-falsa;
-end;</code></pre>
-<ul>
-<li>Without branch else:</li>
-</ul>
-<pre><code>if condizione then do;
-    istruzione-1-se-condizione-vera;
-    istruzione-2-se-condizione-vera;
-    ...
-    istruzione-n-se-condizione-vera;
-end;</code></pre>
-</section>
-<section id="conditional-statements-a-practical-example" class="level2">
-<h2 class="anchored" data-anchor-id="conditional-statements-a-practical-example">Conditional statements: A practical example</h2>
-<p>Now let’s see an example of how to use conditional statements.&nbsp;Let’s start from the example introduced in the previous article and create a dataset again by running the following code</p>
-<pre><code>data people_registry;
-    input id name $ surname $ sex $ age weight height;
-    datalines;
-1 Julia Smith F 29 56 172
-2 Mark Ronson M 47 78 182
-3 Patrick Lane M 33 69 177
-4 Allie White F 45 62 189
-5 Owen Peterson M 39 71 176
-;
-run;</code></pre>
-<p>We now use conditional statements to create a binary variable that indicates whether the subject is male (assuming the value 1) or female (assuming the value 0). These variables are also referred to as <em>dummies</em>.</p>
-<pre><code>data new_people_registry;
-    set people_registry;
-    if sex = 'M' then is_male = 1;
-    else is_male = 0;
-run;</code></pre>
-<p>Thanks to this data step we are able to create a new dataset called <strong>new_people_registry</strong> containing the new variable <strong>is_male</strong>.</p>
-<p>Let’s now print the content of the dataset thus obtained on the screen using the proc print function.</p>
-<p>This function allows you to print the contents of the dataset on the screen. Here is the code needed to generate the output:</p>
-<pre><code>proc print data=new_people_registry;
-run;</code></pre>
-<p>This is the output generated on the screen:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>The SAS System</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Oss</th>
-<th>id</th>
-<th>name</th>
-<th>surname</th>
-<th>sex</th>
-<th>age</th>
-<th>weight</th>
-<th>height</th>
-<th>is_male</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>1</td>
-<td>Julia</td>
-<td>Smith</td>
-<td>F</td>
-<td>29</td>
-<td>56</td>
-<td>172</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>2</td>
-<td>Mark</td>
-<td>Ronson</td>
-<td>M</td>
-<td>47</td>
-<td>78</td>
-<td>182</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>3</td>
-<td>Patrick</td>
-<td>Lane</td>
-<td>M</td>
-<td>33</td>
-<td>69</td>
-<td>177</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>4</td>
-<td>Allie</td>
-<td>White</td>
-<td>F</td>
-<td>45</td>
-<td>62</td>
-<td>189</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>5</td>
-<td>Owen</td>
-<td>Peterson</td>
-<td>M</td>
-<td>39</td>
-<td>71</td>
-<td>176</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>The output confirms that the created variable behaves as expected.</p>
-</section>
-<section id="index" class="level2">
-<h2 class="anchored" data-anchor-id="index">Index</h2>
-<p>To make it easier for you to read this guide, at the end of each article there is an index including all the topics covered.</p>
-<ol type="1">
-<li><p><a href="https://viscioletti.com/2023/01/introduction-to-base-sas/">Introduction to Base SAS</a></p></li>
-<li><p>Conditional statements in Base SAS</p></li>
-</ol>
 
 
-</section>
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<style>
+
+.page-columns {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 0 !important;
+}
+
+#quarto-content {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+
+}
+
+#quarto-content > * {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#title-block-header {
+  display: none;
+}
+
+.page-columns {
+  display: flex !important;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.page-columns > * {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+</style>
+<iframe src="ink-app.html" style="width:100%; height:800px; border:none;"></iframe>
+
+
 
 </main> <!-- /main -->
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    
-    var disqus_config = function () {
-        this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = window.location.pathname; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        this.page.title = document.title;   // Current page title
-    };
-    
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://viscioletti.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<script id="dsq-count-scr" src="//viscioletti.disqus.com/count.js" async=""></script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
