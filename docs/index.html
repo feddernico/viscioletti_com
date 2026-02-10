@@ -1357,6 +1357,57 @@ Federico Viscioletti
   <ul class="pagination"></ul>
 </nav>
 </div></main> <!-- /main -->
+<script id="dsq-count-scr" src="//viscioletti.disqus.com/count.js" async=""></script>
+<script>
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.querySelectorAll('.quarto-post').forEach(function(post) {
+      let titleLink = post.querySelector('h3.listing-title a');
+      
+      if (titleLink) {
+        let originalHref = titleLink.getAttribute('data-original-href');
+        
+        if (originalHref) {
+          let path = originalHref.replace(/^https?:\/\/[^\/]+/, '').replace(/index\.html$/, '');
+          
+          // Create a separate link for comment count
+          let commentLink = document.createElement('a');
+          commentLink.href = titleLink.href + '#disqus_thread';
+          commentLink.setAttribute('data-disqus-identifier', path);
+          commentLink.className = 'disqus-comment-count';
+          commentLink.textContent = '0 Comments';
+          
+          // Add it to the metadata section
+          let metadata = post.querySelector('.metadata');
+          if (metadata) {
+            let commentDiv = document.createElement('div');
+            commentDiv.className = 'listing-comments';
+            commentDiv.appendChild(commentLink);
+            metadata.appendChild(commentDiv);
+          }
+        }
+      }
+    });
+    
+    if (window.DISQUSWIDGETS) {
+      window.DISQUSWIDGETS.getCount({reset: true});
+    }
+  }, 1000);
+});
+</script>
+<style>
+.listing-comments {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #666;
+}
+.disqus-comment-count {
+  text-decoration: none;
+}
+.disqus-comment-count:hover {
+  text-decoration: underline;
+}
+</style>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
