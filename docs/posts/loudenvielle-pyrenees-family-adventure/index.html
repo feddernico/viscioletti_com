@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Federico Viscioletti">
-<meta name="dcterms.date" content="2023-01-21">
+<meta name="dcterms.date" content="2026-02-24">
 
-<title>Introduction to Base SAS – Viscioletti</title>
+<title>Loudenvielle: Dove la fatica incontra la bellezza – Viscioletti</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,9 +118,12 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Introduction to Base SAS</h1>
+      <h1 class="title">Loudenvielle: Dove la fatica incontra la bellezza</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">base-sas</div>
+                <div class="quarto-category">travel</div>
+                <div class="quarto-category">family</div>
+                <div class="quarto-category">pyrenees</div>
+                <div class="quarto-category">france</div>
               </div>
                   </div>
   </div>
@@ -129,17 +131,11 @@ ul.task-list li input[type="checkbox"] {
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Federico Viscioletti </p>
-            </div>
-    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 21, 2023</p>
+        <p class="date">February 24, 2026</p>
       </div>
     </div>
     
@@ -158,86 +154,49 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>In this introduction to Base SAS Base we will begin to explore the world of <a href="http://www.sas.com">SAS</a>, starting with the fundamental building block: the programming language.</p>
-<p>This is the first lesson of the Base SAS course, to be followed by others, focused on the different aspects of the language for data analysis and exploration.</p>
-<section id="intro-to-base-sas" class="level2">
-<h2 class="anchored" data-anchor-id="intro-to-base-sas">Intro to Base SAS</h2>
-<p>SAS, an acronym that stands for <strong>Statistical Analysis System</strong>, is one of the most used software tools to conduct analyses on data. The company, based in Cary (North Carolina), produces a large variety of software tools, but each of these is based on its own proprietary engine: Base SAS.</p>
-<p>This is a real programming language. Through SAS Base it is in fact possible to make any statistical analysis automatic, and therefore re-executable.<br>
-The language is divided into two logical steps:</p>
-<ul>
-<li><p><strong>Data Step</strong> — This allows you to perform <strong>ETL</strong> and <strong>data manipulation</strong> operations. These include data extraction, transformation and loading operations;</p></li>
-<li><p><strong>Proc Step</strong> — Encapsulates all SAS procedures (proc stands indeed for procedure). Among the most used procedures there are for example the <strong>PROC PRINT</strong>, which allows you to display the first <strong>n</strong> records of a dataset on the screen; or the <strong>PROC SQL</strong>, which allows you to execute <em>SQL</em> code within the SAS environment, and so on.</p></li>
-</ul>
-</section>
-<section id="interface" class="level2">
-<h2 class="anchored" data-anchor-id="interface">Interface</h2>
-<p>The graphical interface of SAS Base is minimal and clean. It has two main panels, the first one on the left, necessary to explore the resources coming from SAS libraries or from the file system. In the second one, the one that occupies most of the screen, three tabs are available:</p>
-<ul>
-<li><p><strong>Output</strong> — This panel shows the reports, whether graphical or tabular, of the procedures performed.</p></li>
-<li><p><strong>Log</strong> — Allows you to verify the correct execution of the launched procedures</p></li>
-<li><p><strong>Editor</strong> — This is an intelligent text editor, equipped with some handy features like syntax highlighting. Here you can enter SAS code that you can then execute.</p></li>
-</ul>
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2015/11/sas-base-gui.png"><img src="images/sas-base-gui-300x169.png" class="img-fluid figure-img" alt="Base SAS GUI"></a></p>
-<figcaption>Base SAS GUI</figcaption>
-</figure>
+<style>
+img.cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+</style>
+<p><img class="cover" src="images/pyrenees-cover.jpg" title="Loudenvielle, Cap des Hittes"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<figcaption>
-<p>Base SAS GUI</p>
-</figcaption>
-</figure>
-</section>
-<section id="an-example" class="level2">
-<h2 class="anchored" data-anchor-id="an-example">An example</h2>
-<p>Now let’s start putting our hands on the code, developing a small example that will be useful for exploring the first features of the <strong>data step</strong>. In fact, the following code snippet allows you to load a dataset by inserting the data one record after another with the datalines instruction. The example in question examines a personal dataset of 5 subjects, reporting their name, surname, gender, age, height expressed in centimeters and weight expressed in kilograms.</p>
-<p>Let’s paste and then execute the following SAS code inside the editor:</p>
-<pre><code>data people_registry;
-    input id name $ surname $ sex $ age weight height;
-    datalines;
-1 Julia Smith F 29 56 172
-2 Mark Ronson M 47 78 182
-3 Patrick Lane M 33 69 177
-4 Allie White F 45 62 189
-5 Owen Peterson M 39 71 176
-;
-run;</code></pre>
-<p>Once the code has been executed, the SAS People_registry dataset is available and can be viewed by clicking on the left panel at the path <em>Libraries &gt; Work</em>. Here we will find our SAS table loaded and visible as shown below.</p>
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2015/11/tabella-sas-people-registry.png"><img src="images/tabella-sas-people-registry-300x169.png" class="img-fluid figure-img" alt="SAS People_registry table"></a></p>
-<figcaption>SAS People_registry table</figcaption>
-</figure>
+<div class="callout-title-container flex-fill">
+Note
 </div>
-<figcaption>
-<p>SAS People_registry table</p>
-</figcaption>
-</figure>
-<p>Now let’s also practice creating <strong>calculated variables</strong> within a data step. We therefore calculate the Body Mass Index (Body Mass Index) of each subject, which is expressed as</p>
-<p>[latex size=“1”]BMI = \frac{mass_{kg}}{height^2_m}[/latex]</p>
-<p>So the following SAS code extract takes the <em>people_registry</em> dataset as input and creates a new calculated variable <em>bmi</em>, which calculates the value expressed by the previous formula.</p>
-<pre><code>data people_registry;
-    set people_registry;
-    bmi = weight / ( ( height / 100 ) ** 2 );
-run;</code></pre>
-</section>
-<section id="base-sas-course-index" class="level2">
-<h2 class="anchored" data-anchor-id="base-sas-course-index">Base SAS Course Index</h2>
-<p>To make it easier for you to read the Base SAS course, the index including all the topics covered is shown at the end of each article.</p>
-<ol type="1">
-<li><p>Introduction to Base SAS</p></li>
-<li><p>The conditional instruction in Base SAS</p></li>
-</ol>
-</section>
-<section id="download" class="level2">
-<h2 class="anchored" data-anchor-id="download">Download</h2>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Ricetta per il ricordo perfetto</strong></p>
+<p><strong>Tempo di lettura:</strong> 2 minuti (se leggi senza interruzioni) <br> <strong>Tempo di preparazione:</strong> 8 giorni di viaggio intenso <br> <strong>Difficoltà:</strong> 🔴🔴🔴🔴⚪ <br></p>
+<p>Basato sulla difficoltà del viaggio:</p>
 <ul>
-<li><p>The pdf version of this article: Introduction to Base SAS <a href="https://viscioletti.com/wp-content/uploads/2016/02/introduzione-sas-base.pdf">PDF</a></p></li>
-<li><p>The SAS file used in this post <a href="https://viscioletti.com/wp-content/uploads/2015/11/people_registry.zip">people_registry</a></p></li>
+<li>🔴 Febbre notturna</li>
+<li>🔴 Crisi di sonno per adulti</li>
+<li>🔴 Esplosioni emotive dei bambini</li>
+<li>🔴 Assenza totale di riposo</li>
+<li>⚪ Ricompensa: paesaggi mozzafiato e momenti indimenticabili</li>
 </ul>
+</div>
+</div>
+<section id="le-difficoltà" class="level2">
+<h2 class="anchored" data-anchor-id="le-difficoltà">Le difficoltà</h2>
+<p>È stato forse il viaggio più duro da quando siamo diventati genitori in termini di riorse fisiche e mentali. Le notti si sono sbriciolate in risvegli continui e bisogni di coccole della più piccola. Le giornate scorrevano dentro una logistica senza tregua: addormentare, preparare, pulire, ricominciare. Più che una vacanza, a tratti è sembrata una prova di resistenza domestica trasportata in alta quota. Anche il più grande sta attraversando una fase in cui le emozioni lo travolgono facilmente, trasformandosi in scoppi di collera che si sciolgono solo con molta pazienza e con il conforto dell’immancabile yaya (al secolo il ciuccio).</p>
+<p>Durante la vacanza, riuscire a ritagliarsi uno spazio da condividere da soli col proprio partner è stato quasi impossibile, entrambi continuamente assorbiti dalle necessità dei bambini e dalla logistica delle giornate. Tutto assolutamente nella norma della vita con babmini piccoli, ma quando sei nell’occhio del ciclone non riesci a guardare dall’esterno.</p>
+</section>
+<section id="la-bellezza" class="level2">
+<h2 class="anchored" data-anchor-id="la-bellezza">La bellezza</h2>
+<p>Eppure, anche dentro quella stanchezza, ci sono stati momenti di bellezza smisurata. Dal Cap des Hittes, a 2400 metri, i Pirenei si aprivano come una corona di pietra e luce, immobili e solenni, appena prima della discesa tra neve fresca, dossi improvvisi e rocce da schivare con attenzione. Sciare mi ha sempre dato una sensazione rara di benessere e libertà: la velocità, il bianco intorno, il corpo che finalmente segue un ritmo diverso da quello della vita quotidiana.</p>
+<p>Oppure il rientro lungo il lac di Génos: l’acqua azzurra, quasi cristallina, le case riflesse sulla superficie ferma, il profilo delle montagne sullo sfondo. In quei momenti tutto sembrava ricomporsi, come se la fatica trovasse finalmente una forma, e quindi anche un senso.</p>
+</section>
+<section id="ciò-che-rimane" class="level2">
+<h2 class="anchored" data-anchor-id="ciò-che-rimane">Ciò che rimane</h2>
+<p>Alla fine, di Loudenvielle non mi resterà il ricordo di una vacanza riposante, ma quello di giorni pieni, faticosi e bellissimi a modo loro. Giorni che mi hanno ricordato che, anche quando la vita sembra tutta assorbita dalla stanchezza e dalla cura, la bellezza continua a farsi trovare: in una passeggiata, nella neve, in uno scorcio che apre spazio e da respiro nel disordine dei giorni.</p>
 
 
 </section>
