@@ -9,7 +9,7 @@
 <link>https://viscioletti.com/</link>
 <atom:link href="https://viscioletti.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>The ideas factory</description>
-<generator>quarto-1.5.57</generator>
+<generator>quarto-1.8.27</generator>
 <lastBuildDate>Tue, 24 Feb 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Loudenvielle: Dove la fatica incontra la bellezza</title>
@@ -105,7 +105,7 @@ Note
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2025/07/Screenshot-2025-07-29-at-11.24.38.png"><img src="https://viscioletti.com/posts/prompt-stash-your-vault-for-great-prompts/images/Screenshot-2025-07-29-at-11.24.38-1024x573.png" class="img-fluid figure-img" alt="Screenshot of the Prompt Stash web application interface, displaying options to add a new prompt with fields for title, prompt content, tags, and project assignment."></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2025/07/Screenshot-2025-07-29-at-11.24.38.png"><img src="https://viscioletti.com/posts/prompt-stash-your-vault-for-great-prompts/images/Screenshot-2025-07-29-at-11.24.38-1024x573.png" class="img-fluid figure-img"></a></p>
 <figcaption>Screenshot of the Prompt Stash web application interface, displaying options to add a new prompt with fields for title, prompt content, tags, and project assignment.</figcaption>
 </figure>
 </div>
@@ -523,7 +523,7 @@ progetto.</p></li>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/07/image-3.png"><img src="https://viscioletti.com/posts/ibm-q2-2024-earnings-call-summary/images/image-3.png" class="img-fluid figure-img" alt="IBM Q2 2024 Key Financial Metrics Chart"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/07/image-3.png"><img src="https://viscioletti.com/posts/ibm-q2-2024-earnings-call-summary/images/image-3.png" class="img-fluid figure-img"></a></p>
 <figcaption>IBM Q2 2024 Key Financial Metrics Chart</figcaption>
 </figure>
 </div>
@@ -586,7 +586,7 @@ progetto.</p></li>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/07/image-4.png"><img src="https://viscioletti.com/posts/ibm-q2-2024-earnings-call-summary/images/image-4.png" class="img-fluid figure-img" alt="IBM Q2 2024 Key Financial Metrics Chart"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/07/image-4.png"><img src="https://viscioletti.com/posts/ibm-q2-2024-earnings-call-summary/images/image-4.png" class="img-fluid figure-img"></a></p>
 <figcaption>IBM Q2 2024 Key Financial Metrics Chart</figcaption>
 </figure>
 </div>
@@ -1352,7 +1352,7 @@ df['LOO_Encoded'] = df.apply(loo_encode, args=(df, 'colour', 'target'), axis=1)<
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/roberto-nickson-Ddjl0Cicdr4-unsplash-scaled-e1719437615212.jpg"><img src="https://viscioletti.com/posts/autonomous-vehicles-and-us-love-hate-story/images/roberto-nickson-Ddjl0Cicdr4-unsplash-scaled-e1719437615212-1024x538.jpg" class="img-fluid figure-img" alt="POV: Driving a Tesla in Malibu Beach"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/roberto-nickson-Ddjl0Cicdr4-unsplash-scaled-e1719437615212.jpg"><img src="https://viscioletti.com/posts/autonomous-vehicles-and-us-love-hate-story/images/roberto-nickson-Ddjl0Cicdr4-unsplash-scaled-e1719437615212-1024x538.jpg" class="img-fluid figure-img"></a></p>
 <figcaption>POV: Driving a Tesla in Malibu Beach</figcaption>
 </figure>
 </div>
@@ -1381,7 +1381,7 @@ These experiments help collect information and enhance AI algorithms, in real wo
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/obi-pixel8propix-uAGTGDJaQU0-unsplash.jpg"><img src="https://viscioletti.com/posts/autonomous-vehicles-and-us-love-hate-story/images/obi-pixel8propix-uAGTGDJaQU0-unsplash-1024x768.jpg" class="img-fluid figure-img" alt="Autonomous Vehicles -Volkswagen ID.4 cockpit view"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/06/obi-pixel8propix-uAGTGDJaQU0-unsplash.jpg"><img src="https://viscioletti.com/posts/autonomous-vehicles-and-us-love-hate-story/images/obi-pixel8propix-uAGTGDJaQU0-unsplash-1024x768.jpg" class="img-fluid figure-img"></a></p>
 <figcaption>Autonomous Vehicles -Volkswagen ID.4 cockpit view</figcaption>
 </figure>
 </div>
@@ -1830,6 +1830,138 @@ print(predictions)</code></pre>
   <media:content url="https://viscioletti.com/posts/ai-made-easy-decision-trees-for-data-science-success/images/decision_tree_branching_1.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 <item>
+  <title>How to Handle Missing Data in Machine Learning (Part 1)</title>
+  <dc:creator>Federico Viscioletti</dc:creator>
+  <link>https://viscioletti.com/posts/how-to-handle-missing-data-in-machine-learning-part-1/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>In the world of data science, missing data is a common issue that can impact the performance of machine learning models. In data scientist job interviews, I often ask candidates how they would handle missing data in a machine learning project. Surprisingly, many struggle to choose the most appropriate method. This article explores various techniques to handle missing data and helps you understand their pros and cons.</p>
+</section>
+<section id="why-missing-data-matters" class="level1">
+<h1>Why Missing Data Matters</h1>
+<p>Missing data can introduce bias, reduce statistical power, and lead to inaccurate conclusions. It’s crucial to handle it properly to ensure the robustness of your models.</p>
+</section>
+<section id="common-methods-to-handle-missing-data" class="level1">
+<h1>Common Methods to Handle Missing Data</h1>
+<section id="deletion-methods" class="level2">
+<h2 class="anchored" data-anchor-id="deletion-methods">1. Deletion Methods</h2>
+<section id="listwise-deletion---handle-missing-data" class="level3">
+<h3 class="anchored" data-anchor-id="listwise-deletion---handle-missing-data">Listwise Deletion - Handle Missing Data</h3>
+<p>Listwise deletion is also called complete case analysis. It involves removing any row with at least one missing value.&nbsp;</p>
+<ul>
+<li><p><strong>Pros</strong>: It’s simple to put in place.</p></li>
+<li><p><strong>Cons</strong>: It can lead to significant data loss, especially with large datasets.</p></li>
+</ul>
+<pre><code>df.dropna(inplace=True)</code></pre>
+</section>
+<section id="pairwise-deletion---handle-missing-data" class="level3">
+<h3 class="anchored" data-anchor-id="pairwise-deletion---handle-missing-data">Pairwise Deletion - Handle Missing Data</h3>
+<p>Pairwise deletion, on the other hand, allows the analysis to use all available data without discarding entire rows. It only removes the missing data points for the specific analysis being performed, preserving as much data as possible.</p>
+<ul>
+<li><p><strong>Pros</strong>: Retains more data compared to listwise deletion.</p></li>
+<li><p><strong>Cons</strong>:<br>
+Can complicate analysis and lead to inconsistencies.<br>
+The sample size can vary based on the variables.</p></li>
+</ul>
+</section>
+</section>
+<section id="imputation-methods" class="level2">
+<h2 class="anchored" data-anchor-id="imputation-methods">2. Imputation Methods</h2>
+<section id="meanmedian-imputation---handle-missing-data" class="level3">
+<h3 class="anchored" data-anchor-id="meanmedian-imputation---handle-missing-data">Mean/Median Imputation - Handle Missing Data</h3>
+<p>Mean or median imputation involves replacing missing values with the mean or median of the observed values for that variable.</p>
+<ul>
+<li><p><strong>Pros</strong>: It’s easy to implement, suitable for numerical data.</p></li>
+<li><p><strong>Cons</strong>: It can introduce bias, it underestimates variability.</p></li>
+</ul>
+<pre><code>df['column'].fillna(df['column'].mean(), inplace=True)</code></pre>
+</section>
+<section id="mode-imputation" class="level3">
+<h3 class="anchored" data-anchor-id="mode-imputation">Mode Imputation</h3>
+<p>Mode imputation is used for categorical data, where missing values are replaced with the most frequent value (the mode) in the dataset.</p>
+<ul>
+<li><p><strong>Pros</strong>: Simple and effective for categorical data.</p></li>
+<li><p><strong>Cons</strong>: Can distort frequency distributions.</p></li>
+</ul>
+<pre><code>df['column'].fillna(df['column'].mode()[0], inplace=True)</code></pre>
+</section>
+<section id="k-nearest-neighbours-knn-imputation" class="level3">
+<h3 class="anchored" data-anchor-id="k-nearest-neighbours-knn-imputation">K-Nearest Neighbours (KNN) Imputation</h3>
+<p>KNN imputation uses the values from the k-nearest neighbours (similar data points) to fill in missing values.</p>
+<ul>
+<li><p><strong>Pros</strong>: Can provide more accurate imputations by considering the similarity of samples.</p></li>
+<li><p><strong>Cons</strong>: Computationally intensive, sensitive to outliers.</p></li>
+</ul>
+<pre><code>from sklearn.impute import KNNImputer
+
+imputer = KNNImputer(n_neighbors=5)
+df_filled = imputer.fit_transform(df)</code></pre>
+</section>
+<section id="many-imputation" class="level3">
+<h3 class="anchored" data-anchor-id="many-imputation">Many Imputation</h3>
+<p>Imputation often involves creating many imputed datasets. You then combine the results to account for the uncertainty in the imputations.</p>
+<ul>
+<li><p><strong>Pros</strong>: Accounts for uncertainty, produces robust estimates.</p></li>
+<li><p><strong>Cons</strong>: More complex and time-consuming.</p></li>
+</ul>
+<pre><code>from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import IterativeImputer
+
+imputer = IterativeImputer()
+df_filled = imputer.fit_transform(df)</code></pre>
+</section>
+</section>
+<section id="advanced-imputation-techniques-e.g.-mice-predictive-mean-matching" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-imputation-techniques-e.g.-mice-predictive-mean-matching">Advanced Imputation Techniques (e.g., MICE, Predictive Mean Matching)</h2>
+<p>Advanced imputation techniques, such as Multiple Imputation by Chained Equations (MICE) and Predictive Mean Matching, consider the relationships between variables to provide highly accurate imputations.</p>
+<ul>
+<li><p><strong>Pros</strong>: Highly accurate, considers relationships between variables.</p></li>
+<li><p><strong>Cons</strong>: Requires more computational resources and expertise.</p></li>
+</ul>
+</section>
+<section id="model-based-methods" class="level2">
+<h2 class="anchored" data-anchor-id="model-based-methods">3. <strong>Model-Based Methods</strong></h2>
+<section id="using-algorithms-that-handle-missing-data" class="level3">
+<h3 class="anchored" data-anchor-id="using-algorithms-that-handle-missing-data">Using Algorithms that Handle Missing Data</h3>
+<p>Some machine learning algorithms, such as XGBoost, handle missing data internally. They do this by treating missing values as a separate category or by using them to leverage the algorithm’s built-in capabilities.</p>
+<ul>
+<li><p><strong>Pros</strong>: Simplifies the process, leverages the algorithm’s capability.</p></li>
+<li><p><strong>Cons</strong>: Limited to specific algorithms.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="choosing-the-right-method" class="level1">
+<h1>Choosing the Right Method</h1>
+<p>When deciding how to handle missing data, consider the type of data, the percentage of missing values, and the impact on your analysis. For instance, mean imputation might be good for small datasets with few missing values. Multiple imputation is better for larger datasets with more missing data.</p>
+<p>Curious to see these methods in action and compare their effectiveness? <a href="https://viscioletti.com/2024/05/how-to-handle-missing-data-in-machine-learning-part-2/">Check out Part 2 of this article</a>. We’ll use the Titanic dataset to demonstrate and analyse different imputation techniques.</p>
+</section>
+<section id="lets-connect" class="level1">
+<h1>Let’s Connect</h1>
+<p>You can also find me on:</p>
+<ul>
+<li><p>X/Twitter: <a href="https://x.com/feddernico" title="@feddernico"><span class="citation" data-cites="feddernico">@feddernico</span></a></p></li>
+<li><p>Medium: <a href="https://medium.com/@federico.viscioletti" title="@federico.viscioletti"><span class="citation" data-cites="federico.viscioletti">@federico.viscioletti</span></a></p></li>
+<li><p>Substack: <a href="https://feddernico.substack.com/">https://feddernico.substack.com/</a></p></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>ai</category>
+  <category>data-science</category>
+  <guid>https://viscioletti.com/posts/how-to-handle-missing-data-in-machine-learning-part-1/</guid>
+  <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://viscioletti.com/posts/how-to-handle-missing-data-in-machine-learning-part-1/images/how_to_handle_missing_data_in_ml.png" medium="image" type="image/png" height="82" width="144"/>
+</item>
+<item>
   <title>How to Handle Missing Data in Machine Learning (Part 2)</title>
   <dc:creator>Federico Viscioletti</dc:creator>
   <link>https://viscioletti.com/posts/how-to-handle-missing-data-in-machine-learning-part-2/</link>
@@ -2099,138 +2231,6 @@ plt.show()
   <media:content url="https://viscioletti.com/posts/how-to-handle-missing-data-in-machine-learning-part-2/images/how_to_handle_missing_data_in_ml.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 <item>
-  <title>How to Handle Missing Data in Machine Learning (Part 1)</title>
-  <dc:creator>Federico Viscioletti</dc:creator>
-  <link>https://viscioletti.com/posts/how-to-handle-missing-data-in-machine-learning-part-1/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>In the world of data science, missing data is a common issue that can impact the performance of machine learning models. In data scientist job interviews, I often ask candidates how they would handle missing data in a machine learning project. Surprisingly, many struggle to choose the most appropriate method. This article explores various techniques to handle missing data and helps you understand their pros and cons.</p>
-</section>
-<section id="why-missing-data-matters" class="level1">
-<h1>Why Missing Data Matters</h1>
-<p>Missing data can introduce bias, reduce statistical power, and lead to inaccurate conclusions. It’s crucial to handle it properly to ensure the robustness of your models.</p>
-</section>
-<section id="common-methods-to-handle-missing-data" class="level1">
-<h1>Common Methods to Handle Missing Data</h1>
-<section id="deletion-methods" class="level2">
-<h2 class="anchored" data-anchor-id="deletion-methods">1. Deletion Methods</h2>
-<section id="listwise-deletion---handle-missing-data" class="level3">
-<h3 class="anchored" data-anchor-id="listwise-deletion---handle-missing-data">Listwise Deletion - Handle Missing Data</h3>
-<p>Listwise deletion is also called complete case analysis. It involves removing any row with at least one missing value.&nbsp;</p>
-<ul>
-<li><p><strong>Pros</strong>: It’s simple to put in place.</p></li>
-<li><p><strong>Cons</strong>: It can lead to significant data loss, especially with large datasets.</p></li>
-</ul>
-<pre><code>df.dropna(inplace=True)</code></pre>
-</section>
-<section id="pairwise-deletion---handle-missing-data" class="level3">
-<h3 class="anchored" data-anchor-id="pairwise-deletion---handle-missing-data">Pairwise Deletion - Handle Missing Data</h3>
-<p>Pairwise deletion, on the other hand, allows the analysis to use all available data without discarding entire rows. It only removes the missing data points for the specific analysis being performed, preserving as much data as possible.</p>
-<ul>
-<li><p><strong>Pros</strong>: Retains more data compared to listwise deletion.</p></li>
-<li><p><strong>Cons</strong>:<br>
-Can complicate analysis and lead to inconsistencies.<br>
-The sample size can vary based on the variables.</p></li>
-</ul>
-</section>
-</section>
-<section id="imputation-methods" class="level2">
-<h2 class="anchored" data-anchor-id="imputation-methods">2. Imputation Methods</h2>
-<section id="meanmedian-imputation---handle-missing-data" class="level3">
-<h3 class="anchored" data-anchor-id="meanmedian-imputation---handle-missing-data">Mean/Median Imputation - Handle Missing Data</h3>
-<p>Mean or median imputation involves replacing missing values with the mean or median of the observed values for that variable.</p>
-<ul>
-<li><p><strong>Pros</strong>: It’s easy to implement, suitable for numerical data.</p></li>
-<li><p><strong>Cons</strong>: It can introduce bias, it underestimates variability.</p></li>
-</ul>
-<pre><code>df['column'].fillna(df['column'].mean(), inplace=True)</code></pre>
-</section>
-<section id="mode-imputation" class="level3">
-<h3 class="anchored" data-anchor-id="mode-imputation">Mode Imputation</h3>
-<p>Mode imputation is used for categorical data, where missing values are replaced with the most frequent value (the mode) in the dataset.</p>
-<ul>
-<li><p><strong>Pros</strong>: Simple and effective for categorical data.</p></li>
-<li><p><strong>Cons</strong>: Can distort frequency distributions.</p></li>
-</ul>
-<pre><code>df['column'].fillna(df['column'].mode()[0], inplace=True)</code></pre>
-</section>
-<section id="k-nearest-neighbours-knn-imputation" class="level3">
-<h3 class="anchored" data-anchor-id="k-nearest-neighbours-knn-imputation">K-Nearest Neighbours (KNN) Imputation</h3>
-<p>KNN imputation uses the values from the k-nearest neighbours (similar data points) to fill in missing values.</p>
-<ul>
-<li><p><strong>Pros</strong>: Can provide more accurate imputations by considering the similarity of samples.</p></li>
-<li><p><strong>Cons</strong>: Computationally intensive, sensitive to outliers.</p></li>
-</ul>
-<pre><code>from sklearn.impute import KNNImputer
-
-imputer = KNNImputer(n_neighbors=5)
-df_filled = imputer.fit_transform(df)</code></pre>
-</section>
-<section id="many-imputation" class="level3">
-<h3 class="anchored" data-anchor-id="many-imputation">Many Imputation</h3>
-<p>Imputation often involves creating many imputed datasets. You then combine the results to account for the uncertainty in the imputations.</p>
-<ul>
-<li><p><strong>Pros</strong>: Accounts for uncertainty, produces robust estimates.</p></li>
-<li><p><strong>Cons</strong>: More complex and time-consuming.</p></li>
-</ul>
-<pre><code>from sklearn.experimental import enable_iterative_imputer
-from sklearn.impute import IterativeImputer
-
-imputer = IterativeImputer()
-df_filled = imputer.fit_transform(df)</code></pre>
-</section>
-</section>
-<section id="advanced-imputation-techniques-e.g.-mice-predictive-mean-matching" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-imputation-techniques-e.g.-mice-predictive-mean-matching">Advanced Imputation Techniques (e.g., MICE, Predictive Mean Matching)</h2>
-<p>Advanced imputation techniques, such as Multiple Imputation by Chained Equations (MICE) and Predictive Mean Matching, consider the relationships between variables to provide highly accurate imputations.</p>
-<ul>
-<li><p><strong>Pros</strong>: Highly accurate, considers relationships between variables.</p></li>
-<li><p><strong>Cons</strong>: Requires more computational resources and expertise.</p></li>
-</ul>
-</section>
-<section id="model-based-methods" class="level2">
-<h2 class="anchored" data-anchor-id="model-based-methods">3. <strong>Model-Based Methods</strong></h2>
-<section id="using-algorithms-that-handle-missing-data" class="level3">
-<h3 class="anchored" data-anchor-id="using-algorithms-that-handle-missing-data">Using Algorithms that Handle Missing Data</h3>
-<p>Some machine learning algorithms, such as XGBoost, handle missing data internally. They do this by treating missing values as a separate category or by using them to leverage the algorithm’s built-in capabilities.</p>
-<ul>
-<li><p><strong>Pros</strong>: Simplifies the process, leverages the algorithm’s capability.</p></li>
-<li><p><strong>Cons</strong>: Limited to specific algorithms.</p></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="choosing-the-right-method" class="level1">
-<h1>Choosing the Right Method</h1>
-<p>When deciding how to handle missing data, consider the type of data, the percentage of missing values, and the impact on your analysis. For instance, mean imputation might be good for small datasets with few missing values. Multiple imputation is better for larger datasets with more missing data.</p>
-<p>Curious to see these methods in action and compare their effectiveness? <a href="https://viscioletti.com/2024/05/how-to-handle-missing-data-in-machine-learning-part-2/">Check out Part 2 of this article</a>. We’ll use the Titanic dataset to demonstrate and analyse different imputation techniques.</p>
-</section>
-<section id="lets-connect" class="level1">
-<h1>Let’s Connect</h1>
-<p>You can also find me on:</p>
-<ul>
-<li><p>X/Twitter: <a href="https://x.com/feddernico" title="@feddernico"><span class="citation" data-cites="feddernico">@feddernico</span></a></p></li>
-<li><p>Medium: <a href="https://medium.com/@federico.viscioletti" title="@federico.viscioletti"><span class="citation" data-cites="federico.viscioletti">@federico.viscioletti</span></a></p></li>
-<li><p>Substack: <a href="https://feddernico.substack.com/">https://feddernico.substack.com/</a></p></li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>ai</category>
-  <category>data-science</category>
-  <guid>https://viscioletti.com/posts/how-to-handle-missing-data-in-machine-learning-part-1/</guid>
-  <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://viscioletti.com/posts/how-to-handle-missing-data-in-machine-learning-part-1/images/how_to_handle_missing_data_in_ml.png" medium="image" type="image/png" height="82" width="144"/>
-</item>
-<item>
   <title>3 Proven Real-World Data Science Strategies for Success</title>
   <dc:creator>Federico Viscioletti</dc:creator>
   <link>https://viscioletti.com/posts/3-proven-real-world-data-science-strategies-for-success/</link>
@@ -2317,7 +2317,7 @@ print(classification_report(y_test, y_pred_binary))</code></pre>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/05/Screen-Shot-2024-05-20-at-23.14.02.png"><img src="https://viscioletti.com/posts/3-proven-real-world-data-science-strategies-for-success/images/Screen-Shot-2024-05-20-at-23.14.02-1024x336.png" class="img-fluid figure-img" alt="the output of the classification report using a LightGBM set up for unbalanced target variables"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/05/Screen-Shot-2024-05-20-at-23.14.02.png"><img src="https://viscioletti.com/posts/3-proven-real-world-data-science-strategies-for-success/images/Screen-Shot-2024-05-20-at-23.14.02-1024x336.png" class="img-fluid figure-img"></a></p>
 <figcaption>the output of the classification report using a LightGBM set up for unbalanced target variables</figcaption>
 </figure>
 </div>
@@ -2471,7 +2471,7 @@ print(classification_report(y_test, y_pred_binary))</code></pre>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2023/06/Screenshot-from-2023-06-05-23-12-5-2.png"><img src="https://viscioletti.com/posts/privategpt-sur-aws-la-nouvelle-ere-de-la-securite-documentaire-des-llm/images/Screenshot-from-2023-06-05-23-12-5-2.png" class="img-fluid figure-img" alt="AWS EC2 service page"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2023/06/Screenshot-from-2023-06-05-23-12-5-2.png"><img src="https://viscioletti.com/posts/privategpt-sur-aws-la-nouvelle-ere-de-la-securite-documentaire-des-llm/images/Screenshot-from-2023-06-05-23-12-5-2.png" class="img-fluid figure-img"></a></p>
 <figcaption>AWS EC2 service page</figcaption>
 </figure>
 </div>
@@ -2483,7 +2483,7 @@ print(classification_report(y_test, y_pred_binary))</code></pre>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2023/06/Screenshot-from-2023-06-06-22-40-20.png"><img src="https://viscioletti.com/posts/privategpt-sur-aws-la-nouvelle-ere-de-la-securite-documentaire-des-llm/images/Screenshot-from-2023-06-06-22-40-20-1024x492.png" class="img-fluid figure-img" alt="Instance EC2 using an Ubuntu 22.04 image"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2023/06/Screenshot-from-2023-06-06-22-40-20.png"><img src="https://viscioletti.com/posts/privategpt-sur-aws-la-nouvelle-ere-de-la-securite-documentaire-des-llm/images/Screenshot-from-2023-06-06-22-40-20-1024x492.png" class="img-fluid figure-img"></a></p>
 <figcaption>Instance EC2 using an Ubuntu 22.04 image</figcaption>
 </figure>
 </div>
@@ -2633,7 +2633,7 @@ python ingest.py</code></pre>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/list_of_names.png"><img src="https://viscioletti.com/posts/potenzia-i-tuoi-progetti-costruisci-il-futuro-con-promptgpt-e-chatgpt-una-rivoluzione-nello-sviluppo-di-applicazioni/images/list_of_names-1024x648.png" class="img-fluid figure-img" alt="List of software names as given by chatGPT"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/list_of_names.png"><img src="https://viscioletti.com/posts/potenzia-i-tuoi-progetti-costruisci-il-futuro-con-promptgpt-e-chatgpt-una-rivoluzione-nello-sviluppo-di-applicazioni/images/list_of_names-1024x648.png" class="img-fluid figure-img"></a></p>
 <figcaption>List of software names as given by chatGPT</figcaption>
 </figure>
 </div>
@@ -2647,7 +2647,7 @@ python ingest.py</code></pre>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/ipynb_to_webapp_conversion.png"><img src="https://viscioletti.com/posts/potenzia-i-tuoi-progetti-costruisci-il-futuro-con-promptgpt-e-chatgpt-una-rivoluzione-nello-sviluppo-di-applicazioni/images/ipynb_to_webapp_conversion-1024x743.png" class="img-fluid figure-img" alt="ipynb to web app conversion, as performed by chatGPT"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/ipynb_to_webapp_conversion.png"><img src="https://viscioletti.com/posts/potenzia-i-tuoi-progetti-costruisci-il-futuro-con-promptgpt-e-chatgpt-una-rivoluzione-nello-sviluppo-di-applicazioni/images/ipynb_to_webapp_conversion-1024x743.png" class="img-fluid figure-img"></a></p>
 <figcaption>ipynb to web app conversion, as performed by chatGPT</figcaption>
 </figure>
 </div>
@@ -2659,7 +2659,7 @@ python ingest.py</code></pre>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/current_ipynb.png"><img src="https://viscioletti.com/posts/potenzia-i-tuoi-progetti-costruisci-il-futuro-con-promptgpt-e-chatgpt-una-rivoluzione-nello-sviluppo-di-applicazioni/images/current_ipynb-1024x678.png" class="img-fluid figure-img" alt="The code of the current Jupyter notebook, as shared in chatGPT’s chat"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/current_ipynb.png"><img src="https://viscioletti.com/posts/potenzia-i-tuoi-progetti-costruisci-il-futuro-con-promptgpt-e-chatgpt-una-rivoluzione-nello-sviluppo-di-applicazioni/images/current_ipynb-1024x678.png" class="img-fluid figure-img"></a></p>
 <figcaption>The code of the current Jupyter notebook, as shared in chatGPT’s chat</figcaption>
 </figure>
 </div>
@@ -2675,7 +2675,7 @@ python ingest.py</code></pre>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/promptGPT.png"><img src="https://viscioletti.com/posts/potenzia-i-tuoi-progetti-costruisci-il-futuro-con-promptgpt-e-chatgpt-una-rivoluzione-nello-sviluppo-di-applicazioni/images/promptGPT-1024x765.png" class="img-fluid figure-img" alt="promptGPT’s UI"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/promptGPT.png"><img src="https://viscioletti.com/posts/potenzia-i-tuoi-progetti-costruisci-il-futuro-con-promptgpt-e-chatgpt-una-rivoluzione-nello-sviluppo-di-applicazioni/images/promptGPT-1024x765.png" class="img-fluid figure-img"></a></p>
 <figcaption>promptGPT’s UI</figcaption>
 </figure>
 </div>
@@ -2716,7 +2716,7 @@ python ingest.py</code></pre>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/Time-it-took-for-tech-companies-to-reach-one-million-users.png"><img src="https://viscioletti.com/posts/how-amazon-bedrock-improved-speed-in-llm-testing/images/Time-it-took-for-tech-companies-to-reach-one-million-users.png" class="img-fluid figure-img" alt="Time it took for tech companies to reach one million users"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/Time-it-took-for-tech-companies-to-reach-one-million-users.png"><img src="https://viscioletti.com/posts/how-amazon-bedrock-improved-speed-in-llm-testing/images/Time-it-took-for-tech-companies-to-reach-one-million-users.png" class="img-fluid figure-img"></a></p>
 <figcaption>Time it took for tech companies to reach one million users</figcaption>
 </figure>
 </div>
@@ -2738,7 +2738,7 @@ python ingest.py</code></pre>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/amazon_q_business.png"><img src="https://viscioletti.com/posts/how-amazon-bedrock-improved-speed-in-llm-testing/images/amazon_q_business-1024x577.png" class="img-fluid figure-img" alt="Amazon Q UI, as shown from the AWS presentation video."></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/amazon_q_business.png"><img src="https://viscioletti.com/posts/how-amazon-bedrock-improved-speed-in-llm-testing/images/amazon_q_business-1024x577.png" class="img-fluid figure-img"></a></p>
 <figcaption>Amazon Q UI, as shown from the AWS presentation video.</figcaption>
 </figure>
 </div>
@@ -2820,7 +2820,7 @@ python ingest.py</code></pre>
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/bedrock_model_access.png"><img src="https://viscioletti.com/posts/how-amazon-bedrock-improved-speed-in-llm-testing/images/bedrock_model_access-1024x545.png" class="img-fluid figure-img" alt="Amazon Bedrock Model Access page"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/bedrock_model_access.png"><img src="https://viscioletti.com/posts/how-amazon-bedrock-improved-speed-in-llm-testing/images/bedrock_model_access-1024x545.png" class="img-fluid figure-img"></a></p>
 <figcaption>Amazon Bedrock Model Access page</figcaption>
 </figure>
 </div>
@@ -2845,7 +2845,7 @@ Body of the article goes here
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/aws_bedrock_playground.png"><img src="https://viscioletti.com/posts/how-amazon-bedrock-improved-speed-in-llm-testing/images/aws_bedrock_playground-1024x544.png" class="img-fluid figure-img" alt="Amazon Bedrock Chat Playground. Here you can play with the foundation models and their parameters."></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/aws_bedrock_playground.png"><img src="https://viscioletti.com/posts/how-amazon-bedrock-improved-speed-in-llm-testing/images/aws_bedrock_playground-1024x544.png" class="img-fluid figure-img"></a></p>
 <figcaption>Amazon Bedrock Chat Playground. Here you can play with the foundation models and their parameters.</figcaption>
 </figure>
 </div>
@@ -2920,7 +2920,7 @@ Body of the article goes here
 <p>I am bad at naming software. So, I first wanted to get a good name for my app. So I started with an initial idea and asked chatGPT to give me a list of names.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/list_of_names-1.png"><img src="https://viscioletti.com/posts/empower-your-projects-building-the-future-with-chatgpts-promptgpt-a-breakthrough-in-app-development/images/list_of_names-1-1024x648.png" class="img-fluid figure-img" alt="gathering a list of names for my web app from chatGPT"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/list_of_names-1.png"><img src="https://viscioletti.com/posts/empower-your-projects-building-the-future-with-chatgpts-promptgpt-a-breakthrough-in-app-development/images/list_of_names-1-1024x648.png" class="img-fluid figure-img"></a></p>
 <figcaption>gathering a list of names for my web app from chatGPT</figcaption>
 </figure>
 </div>
@@ -2929,14 +2929,14 @@ Body of the article goes here
 <p>I then asked chatGPT to convert the initial python code to an HTML, CSS, and Javascript web app.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/ipynb_to_webapp_conversion.png"><img src="https://viscioletti.com/posts/empower-your-projects-building-the-future-with-chatgpts-promptgpt-a-breakthrough-in-app-development/images/ipynb_to_webapp_conversion-1024x743.png" class="img-fluid figure-img" alt="asking chatGPT to convert the Jupyter notebook into a fully fledged web app"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/ipynb_to_webapp_conversion.png"><img src="https://viscioletti.com/posts/empower-your-projects-building-the-future-with-chatgpts-promptgpt-a-breakthrough-in-app-development/images/ipynb_to_webapp_conversion-1024x743.png" class="img-fluid figure-img"></a></p>
 <figcaption>asking chatGPT to convert the Jupyter notebook into a fully fledged web app</figcaption>
 </figure>
 </div>
 <p>At first chatGPT forgot to implement some of the features of the original Jupyter notebook version, so I shared the code again to it, to make sure to reproduce it in full.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/current_ipynb.png"><img src="https://viscioletti.com/posts/empower-your-projects-building-the-future-with-chatgpts-promptgpt-a-breakthrough-in-app-development/images/current_ipynb-1024x678.png" class="img-fluid figure-img" alt="sharing the initial code in the Jupyter notebook with chatGPT"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/current_ipynb.png"><img src="https://viscioletti.com/posts/empower-your-projects-building-the-future-with-chatgpts-promptgpt-a-breakthrough-in-app-development/images/current_ipynb-1024x678.png" class="img-fluid figure-img"></a></p>
 <figcaption>sharing the initial code in the Jupyter notebook with chatGPT</figcaption>
 </figure>
 </div>
@@ -2947,7 +2947,7 @@ Body of the article goes here
 <p>As shown in the picture below, PromptGPT is a simple web app. It lets the user save their repeated prompts, parse the markdown output, and sort the chats.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/promptGPT.png"><img src="https://viscioletti.com/posts/empower-your-projects-building-the-future-with-chatgpts-promptgpt-a-breakthrough-in-app-development/images/promptGPT-1024x765.png" class="img-fluid figure-img" alt="the user interface of promptGPT"></a></p>
+<p><a href="https://viscioletti.com/wp-content/uploads/2024/04/promptGPT.png"><img src="https://viscioletti.com/posts/empower-your-projects-building-the-future-with-chatgpts-promptgpt-a-breakthrough-in-app-development/images/promptGPT-1024x765.png" class="img-fluid figure-img"></a></p>
 <figcaption>the user interface of promptGPT</figcaption>
 </figure>
 </div>
