@@ -10,7 +10,116 @@
 <atom:link href="https://viscioletti.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>The ideas factory</description>
 <generator>quarto-1.9.36</generator>
-<lastBuildDate>Tue, 24 Feb 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 21 Mar 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Introducing ink: A Minimalist Markdown Writing App That Lives in Your Browser</title>
+  <dc:creator>Federico Viscioletti</dc:creator>
+  <link>https://viscioletti.com/posts/introducing-ink-a-minimalist-markdown-writing-app-that-lives-in-your-browser/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<style>
+img.cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+</style>
+<p><img src="https://viscioletti.com/posts/introducing-ink-a-minimalist-markdown-writing-app-that-lives-in-your-browser/images/ink-post-top-image.png" title="ink, a minimalist Markdown editor" class="cover"></p>
+<p>There’s a particular kind of frustration that comes from reaching for a writing tool and finding yourself distracted — by a cluttered interface, a subscription paywall, or a syncing service you didn’t ask for. <a href="https://viscioletti.com/ink"><strong>ink</strong></a> is my answer to that frustration: a free, open-source, minimalist markdown writing app that runs entirely in your browser, with no account, no cloud, and no noise.</p>
+<section id="what-is-ink" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-ink">What Is ink?</h2>
+<p>ink is a single-page webapp built for writing and managing documents in Markdown. You open it, you write. Your files are saved to a local workspace on your own machine using the browser’s native <a href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System Access API</a>, which means your notes never leave your device unless you choose to export them.</p>
+<p>The entire application ships as a <strong>single HTML file</strong> — <code>ink-app.html</code> — with all styles and scripts embedded inline. There’s nothing to install, no server to maintain, and no dependencies to update on your end. You can even download the file and run it offline, if you wish so.</p>
+</section>
+<section id="why-i-built-it" class="level2">
+<h2 class="anchored" data-anchor-id="why-i-built-it">Why I Built It</h2>
+<p>Most writing apps fall into one of two traps: they’re either too powerful (and thus too complex), or they’re too simple (and miss features you actually need). ink sits in the space between — functional without being bloated, minimal without being crippled.</p>
+</section>
+<section id="core-features" class="level2">
+<h2 class="anchored" data-anchor-id="core-features">Core Features</h2>
+<ul>
+<li><strong>Workspace-based organisation</strong> — open a local folder as your workspace and browse all your <code>.md</code> files in a sidebar tree</li>
+<li><strong>Markdown writing</strong> — a focused editor with clean, readable typography</li>
+<li><strong>Tag/frontmatter support</strong> — notes support YAML frontmatter tags, parsed and indexed automatically</li>
+<li><strong>Export options</strong> — export the current note as Markdown, or export all notes at once as a single JSON bundle</li>
+<li><strong>Keyboard-first workflow</strong> — everything has a shortcut:</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>New note</td>
+<td><code>Ctrl/Cmd + E</code></td>
+</tr>
+<tr class="even">
+<td>Open workspace</td>
+<td><code>Ctrl/Cmd + Shift + O</code></td>
+</tr>
+<tr class="odd">
+<td>Save note</td>
+<td><code>Ctrl/Cmd + S</code></td>
+</tr>
+<tr class="even">
+<td>Refresh workspace</td>
+<td><code>Ctrl/Cmd + L</code></td>
+</tr>
+<tr class="odd">
+<td>Export as Markdown</td>
+<td><code>Ctrl/Cmd + Shift + M</code></td>
+</tr>
+<tr class="even">
+<td>Export all as JSON</td>
+<td><code>Ctrl/Cmd + Shift + S</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-it-works-under-the-hood" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-works-under-the-hood">How It Works Under the Hood</h2>
+<p>For the technically curious: ink is written in <strong>TypeScript</strong> and built with <strong>esbuild</strong> and <strong>SASS</strong>, assembled into a single self-contained HTML file. The source is modular — feature responsibilities are split cleanly across <code>app-controller</code>, <code>ui-events</code>, <code>workspace-io</code>, <code>tree-render</code>, <code>dom</code>, <code>fs-api</code>, and <code>types</code>. The project is fully tested, with both <strong>QUnit unit tests</strong> and <strong>Cypress end-to-end tests</strong> covering the core writing workflow.</p>
+<p>The use of the File System Access API is a deliberate choice: it bridges the gap between a native app and a web app. You pick a real folder on your disk, ink reads and writes real files, and those files are yours — readable by any text editor, version-controllable with Git, and portable to any other tool.</p>
+</section>
+<section id="who-is-it-for" class="level2">
+<h2 class="anchored" data-anchor-id="who-is-it-for">Who Is It For?</h2>
+<p>ink is ideal if you:</p>
+<ul>
+<li>Take notes in plain Markdown and want a lightweight home for them</li>
+<li>Prefer working with local files rather than a cloud service</li>
+<li>Value keyboard shortcuts and a fast, snappy interface</li>
+<li>Want an app you can inspect, fork, and self-host freely</li>
+<li>Simply want to write without being sold something</li>
+</ul>
+<p>It’s a good fit for developers, writers, researchers, and anyone who thinks their notes should be stored in <code>.md</code> files they actually own.</p>
+</section>
+<section id="try-it-now" class="level2">
+<h2 class="anchored" data-anchor-id="try-it-now">Try It Now</h2>
+<p>Head to <a href="https://viscioletti.com/ink"><strong>viscioletti.com/ink</strong></a> to open the app directly in your browser — no sign-up needed. The source code is available and open at <a href="https://github.com/feddernico/ink"><strong>github.com/feddernico/ink</strong></a> under the MIT licence. Contributions and feedback are very welcome.</p>
+</section>
+<section id="would-you-like-to-contribute" class="level2">
+<h2 class="anchored" data-anchor-id="would-you-like-to-contribute">Would You Like To Contribute?</h2>
+<p>ink is an open project, and if it turns out to be useful for your own writing or note-taking, I’d love for you to help make it better. Whether that means reporting a bug, suggesting a feature, improving the documentation, refining the design, or opening a pull request, every contribution is welcome. And if you simply want to support the project and encourage its continued development, that support means a great deal too — the best open-source tools grow because people find them valuable enough to use, share, and improve together.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>productivity</category>
+  <category>tools</category>
+  <category>markdown</category>
+  <category>open-source</category>
+  <guid>https://viscioletti.com/posts/introducing-ink-a-minimalist-markdown-writing-app-that-lives-in-your-browser/</guid>
+  <pubDate>Sat, 21 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://raw.githubusercontent.com/feddernico/ink/main/assets/branding/logo.svg" medium="image" type="image/svg+xml"/>
+</item>
 <item>
   <title>Loudenvielle: Dove la fatica incontra la bellezza</title>
   <link>https://viscioletti.com/posts/loudenvielle-pyrenees-family-adventure/</link>
@@ -3186,82 +3295,6 @@ As always, I appreciate your feedback and am open to any suggestions or changes 
   <guid>https://viscioletti.com/posts/how-to-handle-pull-requests-in-git-and-github/</guid>
   <pubDate>Sat, 30 Mar 2024 00:00:00 GMT</pubDate>
   <media:content url="https://viscioletti.com/posts/how-to-handle-pull-requests-in-git-and-github/images/how_to_handle_pull_requests.png" medium="image" type="image/png" height="82" width="144"/>
-</item>
-<item>
-  <title>Peak Performance Modeling: Harnessing Bagging and Boosting for Superior Results</title>
-  <dc:creator>Federico Viscioletti</dc:creator>
-  <link>https://viscioletti.com/posts/peak-performance-modeling-harnessing-bagging-and-boosting-for-superior-results/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>In the world of machine learning, two key ensemble techniques stand out. They can improve model performance. They are: bagging and boosting. But how do you decide which one to use? Let’s break it down.</p>
-<section id="bagging-the-variance-reducer" class="level1">
-<h1>Bagging: The Variance Reducer</h1>
-<p>Bagging is a champion at reducing variance. It involves training many models on different subsets of the data. Then, it averages their predictions. This method works well for high-bias models. It cuts variance without adding bias. This makes the ensemble model more stable and accurate.</p>
-<section id="bagging-python-example" class="level2">
-<h2 class="anchored" data-anchor-id="bagging-python-example">Bagging: Python Example</h2>
-<p>In Python, you can use the `BaggingClassifier` from the `sklearn.ensemble` module. It is common for bagging. It involves creating many models on bootstrapped datasets. The models are usually of the same type. Then, they average their predictions.</p>
-<pre><code>from sklearn.ensemble import BaggingClassifier
-from sklearn.tree import DecisionTreeClassifier
-
-bagging_model = BaggingClassifier(DecisionTreeClassifier(), n_estimators=100)
-
-bagging_model.fit(X_train, y_train)</code></pre>
-</section>
-</section>
-<section id="boosting-the-bias-minimiser" class="level1">
-<h1>Boosting: The Bias Minimiser</h1>
-<p>Boosting is different. It trains models one at a time. Each one corrects the errors of the previous ones. This approach is great for models with high variance. It focuses on cutting bias. This enhances the ensemble’s ability to generalize.</p>
-<section id="boosting-python-example" class="level2">
-<h2 class="anchored" data-anchor-id="boosting-python-example">Boosting: Python Example</h2>
-<p>For boosting, `GradientBoostingClassifier` from `sklearn.ensemble` is a popular choice. It builds one tree at a time, where each new tree helps to correct errors made by previously trained trees.</p>
-<pre><code>from sklearn.ensemble import GradientBoostingClassifier
-
-boosting_model = GradientBoostingClassifier(n_estimators=100)
-
-boosting_model.fit(X_train, y_train)</code></pre>
-</section>
-</section>
-<section id="choosing-the-right-technique" class="level1">
-<h1>Choosing the Right Technique</h1>
-<p>The choice between bagging and boosting isn’t random. It depends on understanding your model’s current weaknesses. If your model suffers from high variance, consider boosting to cut bias. If the problem is high bias, bagging might be your go-to solution. It reduces variance.</p>
-</section>
-<section id="real-world-applications" class="level1">
-<h1><strong>Real-World Applications</strong></h1>
-<p>Many sectors use bagging and boosting techniques. They show their power in making predictive models better.</p>
-<section id="finance" class="level2">
-<h2 class="anchored" data-anchor-id="finance">Finance</h2>
-<p>Banks use these methods for credit scoring. They use them to check loan applicants’ risk levels and to find fraud. Accuracy is key.</p>
-</section>
-<section id="healthcare" class="level2">
-<h2 class="anchored" data-anchor-id="healthcare">Healthcare</h2>
-<p>In medical diagnostics, these techniques help predict disease outbreaks and diagnose patients. They do this by analyzing complex datasets, to ensure timely and accurate decisions.</p>
-</section>
-<section id="e-commerce" class="level2">
-<h2 class="anchored" data-anchor-id="e-commerce">E-commerce</h2>
-<p>These algorithms power recommendation systems. They analyze customer behavior and preferences. They improve shopping experiences and boost sales.</p>
-</section>
-<section id="agriculture" class="level2">
-<h2 class="anchored" data-anchor-id="agriculture">Agriculture</h2>
-<p>Predictive models help forecast crop yields. They also detect pest infestations. This helps with efficient farm management and productivity.</p>
-<p>Adding bagging and boosting to their machine learning strategies can boost industries. It will make them more efficient. They can also improve their decisions and service quality.</p>
-<p>In summary, both bagging and boosting offer clear advantages. The best one depends on your model’s characteristics. Picking the right technique can improve your model. This makes it a critical choice in your machine learning toolkit.</p>
-<p>Share your thoughts, experiences, or questions about bagging and boosting. You can post them in the comments below. Let’s continue learning together.</p>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>ai</category>
-  <category>data-science</category>
-  <category>python</category>
-  <guid>https://viscioletti.com/posts/peak-performance-modeling-harnessing-bagging-and-boosting-for-superior-results/</guid>
-  <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://viscioletti.com/posts/peak-performance-modeling-harnessing-bagging-and-boosting-for-superior-results/images/DALL·E-2024-01-31-22.55.39-Create-a-c_07cfcec0.png" medium="image" type="image/png" height="68" width="144"/>
 </item>
 </channel>
 </rss>
