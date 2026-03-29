@@ -10,7 +10,36 @@
 <atom:link href="https://viscioletti.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>The ideas factory</description>
 <generator>quarto-1.9.36</generator>
-<lastBuildDate>Sat, 21 Mar 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 29 Mar 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Come un lago di notte</title>
+  <dc:creator>Federico Viscioletti</dc:creator>
+  <link>https://viscioletti.com/posts/come-un-lago-di-notte/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<style>
+img.cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: 50% 72%;
+}
+</style>
+<p><img src="https://viscioletti.com/posts/come-un-lago-di-notte/images/stifone-narni-notte.png" title="Stifone, Narni, nighttime" class="cover"></p>
+<p>E tu sei come un lago di notte<br> ti vengo a cercare<br> ma ho un taglio sul piede<br> non cammino bene<br> mi fermo a pensare<br> <br> sono rigonfio di rabbia <br><br> mettere ordine nella mia stanza<br> era mettere ordine nella mia vita <br><br> una moltitudine di solitudini <br><br> quanti posti<br> quanti luoghi<br> quanti bicchieri<br> quante persone<br> <br> e noi siamo come i lupi nel plenilunio <br><br> quante ne hai avute, di collisioni?<br> mi mancano le mani per contarle</p>
+
+
+
+ ]]></description>
+  <category>poetry</category>
+  <guid>https://viscioletti.com/posts/come-un-lago-di-notte/</guid>
+  <pubDate>Sun, 29 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://viscioletti.com/posts/come-un-lago-di-notte/images/stifone-narni-notte.png" medium="image" type="image/png" height="215" width="144"/>
+</item>
 <item>
   <title>Introducing ink: A Minimalist Markdown Writing App That Lives in Your Browser</title>
   <dc:creator>Federico Viscioletti</dc:creator>
@@ -3152,173 +3181,6 @@ print(df)</code></pre>
   <guid>https://viscioletti.com/posts/elevate-data-analysis-the-ultimate-pandas-guide-to-conditional-columns/</guid>
   <pubDate>Wed, 03 Apr 2024 00:00:00 GMT</pubDate>
   <media:content url="https://viscioletti.com/posts/elevate-data-analysis-the-ultimate-pandas-guide-to-conditional-columns/images/conditional_columns.png" medium="image" type="image/png" height="82" width="144"/>
-</item>
-<item>
-  <title>How to handle pull requests in git and GitHub</title>
-  <dc:creator>Federico Viscioletti</dc:creator>
-  <link>https://viscioletti.com/posts/how-to-handle-pull-requests-in-git-and-github/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Software development is changing. Mastering pull requests in Git and GitHub is like learning diplomacy in coding. This article starts aims to explain the details of this art. It presents a guide for both the raiser and the reviewer. At its core, the process is a delicate balance. It is about proposing improvements in a positive way. But, you must also protect the codebase’s integrity. The process embodies a team spirit that fuels innovation. The idea is to foster an environment where quality, speed, and mutual growth are key. This helps ensuring that each pull request is not only a submission. It is a step towards excellence in data science and software.</p>
-<section id="why-are-pull-requests-important" class="level2">
-<h2 class="anchored" data-anchor-id="why-are-pull-requests-important">Why are pull requests important</h2>
-<p>How skilled you should be at developing software is a hot topic for Data Scientists. In an ideal world, Data Science should be the intersection between Software. It should be where software development, machine learning, and domain expertise meet (look at the fancy Venn Diagram). We all know that, as always, the reality is a bit more complex than what it looks like.</p>
-<figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/03/data_science_venn.png"><img src="https://viscioletti.com/posts/how-to-handle-pull-requests-in-git-and-github/images/data_science_venn-1024x571.png" class="img-fluid figure-img"></a></p>
-<figcaption>
-<p>Data Science, the place where the unicorns live</p>
-</figcaption>
-</figure>
-<p>That means we, as data scientists (yes, I am guilty too), are not good at software development. We lack the basics of what good software should look like.</p>
-<p>Whenever we work on an analysis or a model on our own, we can indulge in adding and sharing all our work on the main branch. But, as soon as we start working in a team, this approach becomes inefficient or even harmful.</p>
-<p>This happens when colleagues work on the same project. Usually, they end up editing the same scripts. We can use a powerful tool that git and GitHub offer: pull requests. It creates order in what will otherwise become a spaghetti code club.</p>
-<figure class="figure">
-<p><a href="https://viscioletti.com/wp-content/uploads/2024/03/spaghetti_code_club_2.png"><img src="https://viscioletti.com/posts/how-to-handle-pull-requests-in-git-and-github/images/spaghetti_code_club_2-1024x820.png" class="img-fluid figure-img"></a></p>
-<figcaption>
-<p>What a spaghetti code club looks like in my head, thanks DALL-E3!</p>
-</figcaption>
-</figure>
-<p>But first, let’s look at the details of how a pull request works and why it is important for a Data Scientist in a team. If you don’t know what a pull request is, or need a git refresher for Data Science teamwork, see my article: <a href="https://medium.com/@federico.viscioletti/data-science-teamwork-made-easy-with-git-a-step-by-step-guide-e8a49c913153">Data Science teamwork made easy with git: A step-by-step guide</a>.</p>
-</section>
-<section id="best-practices-for-pull-request-raisers" class="level2">
-<h2 class="anchored" data-anchor-id="best-practices-for-pull-request-raisers">Best practices for pull request raisers</h2>
-<section id="start-with-a-clear-goal" class="level3">
-<h3 class="anchored" data-anchor-id="start-with-a-clear-goal">Start with a clear goal</h3>
-<p>Having a clear goal for each pull request is key. It ensures fruitful collaboration between data scientists. This clarity is vital. It’s especially important for code changes that involve data models or analytical algorithms. These changes need careful examination to ensure accuracy and efficiency.</p>
-<p>A clear and concise goal for each pull request is essential to fostering a productive collaboration among team members, including data scientists. A well-defined goal helps to streamline the review process, set clear expectations, and enable contributors to understand the context and purpose of the proposed changes. This clarity is particularly crucial when code changes involve complex data models or analytical algorithms, which require thorough examination to ensure accuracy and efficiency.</p>
-<p>By setting a clear objective, team members can focus their efforts on achieving a specific outcome, thereby reducing the risk of scope creep or miscommunication. Additionally, it encourages meaningful feedback and discussions that can lead to innovative solutions and improvements. Maintaining this level of clarity and purpose in pull requests is a fundamental practice that supports the continuous integration and delivery pipeline, thereby enhancing the overall productivity and quality of the collaborative development process.</p>
-</section>
-<section id="include-all-the-relevant-information" class="level3">
-<h3 class="anchored" data-anchor-id="include-all-the-relevant-information">Include all the relevant information</h3>
-<p>Sometimes we are lazy (again, I’m guilty your honor). We want to finish a script we’ve worked on for weeks. So we create a pull request that only contains a title and nothing more. This is bad. We are not letting the reviewer understand the context of a change or its logic.</p>
-<p>The best way to ensure that we have all the needed information is to use a template for each pull request. The template should contain the following points:</p>
-<ul>
-<li><p><strong>context</strong>: describe the changes made in simple terms</p></li>
-<li><p><strong>fully functioning code</strong>: does the code run without errors?</p></li>
-<li><p><strong>unit tests</strong>: did you test the code before raising the PR?</p></li>
-<li><p><strong>seek feedback</strong>: include any specific area where feedback is sought</p></li>
-</ul>
-</section>
-<section id="make-smaller-incremental-changes" class="level3">
-<h3 class="anchored" data-anchor-id="make-smaller-incremental-changes">Make smaller, incremental changes</h3>
-<p>Once I needed to review a PR where 84 files where changed. Whenever you end up raising such a big PR, consider how hard it is to review it. This is especially true for someone who lacks the context or didn’t work on the same project.</p>
-<p>Reviewing something this big requires a considerable amount of time. Instead of taking a more agile approach, we can define the max number of files that one can change in a single PR. This will help the review process. It will enable faster integration and reduce the risk of big errors.</p>
-</section>
-<section id="use-naming-and-organisation-conventions" class="level3">
-<h3 class="anchored" data-anchor-id="use-naming-and-organisation-conventions">Use naming and organisation conventions</h3>
-<p>Following a consistent naming throughout the project and company is key. It’s important to ensure that everyone aligns on code standards. This practice helps maintain readability and understandability of the code changes.</p>
-<p>Some examples of python code styles used in big tech companies:</p>
-<ul>
-<li><p><a href="https://google.github.io/styleguide/pyguide.html" title="Google Python Style Guide">Google Python Style Guide</a></p></li>
-<li><p><a href="https://docs.python-guide.org/" title="The Hitchiker's Guide to Python style guide">The Hitchiker’s Guide to Python style guide</a></p></li>
-</ul>
-</section>
-<section id="include-tests-and-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="include-tests-and-documentation">Include Tests and Documentation</h3>
-<p>Ensuring the code runs without errors is crucial. It must also do what’s intended. This is another key part of a good codebase. A good pull request should have tested code. It should also have updated documentation. This ensures no surprises. The tests cover issues that might arise when the code runs.</p>
-</section>
-</section>
-<section id="best-practices-for-reviewers-in-data-science" class="level2">
-<h2 class="anchored" data-anchor-id="best-practices-for-reviewers-in-data-science">Best Practices for Reviewers in Data Science</h2>
-<section id="approach-with-a-constructive-mindset" class="level3">
-<h3 class="anchored" data-anchor-id="approach-with-a-constructive-mindset">Approach with a Constructive Mindset</h3>
-<p>Constructive criticism delivered with a positive mindset can enhance the collaborative process. When a reviewer takes this view, they enable a more open and productive environment. Focus on suggesting improvements rather than pointing out flaws. This not only motivates the raiser but also fosters a sense of partnership. This philosophy also ensures continuous learning for both the reviewer and the raiser. Each interaction becomes an opportunity for their growth.</p>
-</section>
-<section id="understand-the-context" class="level3">
-<h3 class="anchored" data-anchor-id="understand-the-context">Understand the Context</h3>
-<p>Before reviewing code, you must understand the pull request’s context. This understanding forms the foundation for constructive feedback that aligns with project objectives. Reviewers should know the pull request’s goal. What issues does it address? How does it contribute to the project’s goals? Does it add features or improvements? How do they fit the current development cycle?</p>
-<p>Taking time to understand the context goes beyond reading the code changes. Look at the related docs. Also, check the commit messages and any linked tickets or user stories. They can show the developer’s goals and the expected outcomes of the pull request.</p>
-</section>
-<section id="asking-clarifying-questions" class="level3">
-<h3 class="anchored" data-anchor-id="asking-clarifying-questions">Asking clarifying questions</h3>
-<p>So, the context or goal of the pull request is not clear from the provided information. Then, it’s essential to seek clarity.</p>
-<ul>
-<li><p><strong>Don’t hesitate to ask questions.</strong> If any aspect of the code or its purpose is not clear, ask for clarification. This can cover technical details. It explains the reason for specific choices. It also explains how the changes affect the codebase.</p></li>
-<li><p><strong>Use comments.</strong> Most version control platforms let you comment on pull requests. Use this feature to ask pointed questions. Use it for explanations of complex code parts.</p></li>
-<li><p><strong>Engage in a dialogue.</strong> Create a place where the raiser can explain without feeling defensive. Frame questions to help understanding.</p></li>
-</ul>
-<p>Reviewers help by encouraging clear communication. They also understand the context of the changes. This ensures the review is thorough, fast, and leads to useful changes.</p>
-</section>
-<section id="focus-on-the-big-picture" class="level3">
-<h3 class="anchored" data-anchor-id="focus-on-the-big-picture">Focus on the big picture</h3>
-<p>The PR reviewers should focus on the big picture. They should consider how the changes fit into the project. They should consider the changes’ impact on existing functions. Not getting too bogged down in minor style issues is key. They don’t much affect the project’s goals and that is important. Following a style guide is important. But, in a project, we should welcome the small personal differences in coding styles.</p>
-</section>
-<section id="provide-clear-actionable-feedback" class="level3">
-<h3 class="anchored" data-anchor-id="provide-clear-actionable-feedback">Provide Clear, Actionable Feedback</h3>
-<p>The reviewer should also focus on giving clear feedback. The feedback should be something the raiser can use to improve the pull request. Using specific examples or suggesting alternative implementations helps clarify the feedback shared.</p>
-</section>
-<section id="foster-a-culture-of-learning-and-improvement" class="level3">
-<h3 class="anchored" data-anchor-id="foster-a-culture-of-learning-and-improvement">Foster a Culture of Learning and Improvement</h3>
-<p>The review process plays a key role in a Data Science team. It fosters a culture of learning and improvement in the team. The reviewer should always seek ways to encourage sharing. They should do this during the review process.</p>
-</section>
-</section>
-<section id="example" class="level2">
-<h2 class="anchored" data-anchor-id="example">Example</h2>
-<p>I am a fan of explaining with examples. So, here’s an example of a well-crafted PR in a simple Python project. It adds a new feature: a function to calculate factorials. This example will follow the best practices outlined in the article</p>
-<section id="title-of-the-pull-request" class="level3">
-<h3 class="anchored" data-anchor-id="title-of-the-pull-request">Title of the Pull Request</h3>
-<p><code>Add factorial function to math utilities</code></p>
-</section>
-<section id="description" class="level3">
-<h3 class="anchored" data-anchor-id="description">Description</h3>
-<pre><code>## Overview
-This pull request introduces a new function, `calculate_factorial`, to our collection of mathematical utility functions. The addition of this function aims to extend our utility module's capabilities, allowing it to support factorial calculations which are frequently required in combinatorial mathematics and algorithmic challenges.
-
-## Changes Made
-- Implemented `calculate_factorial` in `math_utils.py` which takes an integer input and returns its factorial.
-- Added unit tests in `test_math_utils.py` to ensure the correctness of the factorial function across a range of inputs, including edge cases like 0 and 1.
-
-## How to Test
-1. Pull this branch into your local environment.
-2. Run the unit tests using the command: `python -m unittest discover -s tests`.
-3. All tests should pass, verifying the correct implementation of the factorial function.
-
-## Related Issue
-This PR addresses the feature request outlined in Issue #1234.
-
-## Screenshots/Output Snippets
-For a quick verification, here’s an example output of the function when input is 5:
-
-&gt;&gt;&gt; from math_utils import calculate_factorial
-&gt;&gt;&gt; calculate_factorial(5)
-120
-
-As always, I appreciate your feedback and am open to any suggestions or changes you think might improve this implementation. Thank you for considering this addition to our project!</code></pre>
-</section>
-<section id="key-points-in-this-pull-request-example" class="level3">
-<h3 class="anchored" data-anchor-id="key-points-in-this-pull-request-example">Key Points in This Pull Request Example:</h3>
-<ul>
-<li><p><strong>Title</strong>: The title is concise, clearly indicating what the PR aims to add without requiring the reader to dive into the details immediately.</p></li>
-<li><p><strong>Overview</strong>: Provides a summary of what this PR is about and the rationale behind it.</p></li>
-<li><p><strong>Changes Made</strong>: Lists the specific changes made in this PR, enhancing transparency and making it easier for reviewers to understand the scope of the PR.</p></li>
-<li><p><strong>How to Test</strong>: Includes clear testing steps, allowing reviewers to easily verify the functionality added or changed.</p></li>
-<li><p><strong>Related Issue</strong>: Links the PR to any related issue(s), providing context and ensuring it’s easy to track the development process.</p></li>
-<li><p><strong>Screenshots/Output Snippets</strong>: Offers a quick way to see the result of the change, aiding in the review process.</p></li>
-</ul>
-</section>
-</section>
-<section id="conclusion-harnessing-the-collective-wisdom" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion-harnessing-the-collective-wisdom">Conclusion: Harnessing the Collective Wisdom</h2>
-<ul>
-<li><p>Pull requests are a catalyst for collaboration and knowledge sharing within Data Science teams. Following best practices can turn these requests into chances to grow and improve.</p></li>
-<li><p>Improving how we handle pull requests makes the codebase strong and efficient. It also shows our expertise. This keeps our projects at the cutting edge. Every contributor drives them with diverse insights and careful work.</p></li>
-<li><p>Embracing both raisers’ and reviewers’ views in pull requests enriches our understanding. It shows the collaborative journey in software development. It helps us appreciate it, leading to better, more resilient, and innovative solutions.</p></li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>data-science</category>
-  <category>git</category>
-  <category>python</category>
-  <guid>https://viscioletti.com/posts/how-to-handle-pull-requests-in-git-and-github/</guid>
-  <pubDate>Sat, 30 Mar 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://viscioletti.com/posts/how-to-handle-pull-requests-in-git-and-github/images/how_to_handle_pull_requests.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 </channel>
 </rss>
