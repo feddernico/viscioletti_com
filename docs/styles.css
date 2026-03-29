@@ -9,7 +9,7 @@
 
 .quarto-title-banner { background: none };
 
-#title-block-header.quarto-title-block.default .quarto-title-meta {
+.quarto-title-meta {
     background: #FFF;
     opacity: 70%;
     border-radius: 9px 9px 0 0;
