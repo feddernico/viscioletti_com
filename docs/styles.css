@@ -1,1 +1,10 @@
 /* css styles */
+#title-block-header {
+  background-image: url("images/top_image.png");
+  background-position: center top;
+  background-size: cover;
+  
+  min-height: 210px;
+}
+
+.quarto-title-banner { background: none };
