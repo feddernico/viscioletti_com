@@ -21,16 +21,16 @@
 
 
 
-<style>
-img.cover {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: 50% 72%;
-}
-</style>
-<p><img src="https://viscioletti.com/posts/come-un-lago-di-notte/images/stifone-narni-notte.png" title="Stifone, Narni, nighttime" class="cover"></p>
+<div id="card" class="spatial-card">
+<img src="https://viscioletti.com/posts/come-un-lago-di-notte/images/stifone-narni-notte.png" alt="Stifone, Narni, nighttime">
+<div class="caption">
+Stifone, Narni — nighttime
+</div>
+</div>
+<p><br></p>
+<div class="poem">
 <p>E tu sei come un lago di notte<br> ti vengo a cercare<br> ma ho un taglio sul piede<br> non cammino bene<br> mi fermo a pensare<br> <br> sono rigonfio di rabbia <br><br> mettere ordine nella mia stanza<br> era mettere ordine nella mia vita <br><br> una moltitudine di solitudini <br><br> quanti posti<br> quanti luoghi<br> quanti bicchieri<br> quante persone<br> <br> e noi siamo come i lupi nel plenilunio <br><br> quante ne hai avute, di collisioni?<br> mi mancano le mani per contarle</p>
+</div>
 
 
 
