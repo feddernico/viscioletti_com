@@ -10,7 +10,105 @@
 <atom:link href="https://viscioletti.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>The ideas factory</description>
 <generator>quarto-1.9.36</generator>
-<lastBuildDate>Sun, 29 Mar 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 03 Apr 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Ink v1.1.5: Meet Cogito, Your Local-First Writing Companion</title>
+  <link>https://viscioletti.com/posts/2026/04/03/ink-v1-1-5-meet-cogito-your-local-first-writing-companion/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<style>
+img.cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+</style>
+<p><img src="https://viscioletti.com/posts/2026/04/03/ink-v1-1-5-meet-cogito-your-local-first-writing-companion/images/ink-cogito-mode-descartes.png" title="ink, a minimalist Markdown editor" class="cover"></p>
+<section id="ink-v1.1.5-meet-cogito-your-local-first-writing-companion" class="level1">
+<h1>Ink v1.1.5: Meet Cogito, Your Local-First Writing Companion</h1>
+<p><em>Weekly development digest — week of 28 March to 3 April 2026</em></p>
+<p>Writing tools have a habit of getting in your way. They autocomplete your sentences, rewrite your paragraphs, and optimise your prose into something that sounds like everyone else. <a href="https://github.com/feddernico/ink">ink</a> — a local-first markdown editor and exporter — has been quietly moving in a different direction, and this week’s release makes that clearest yet.</p>
+<p><strong>v1.1.5 introduces Cogito Mode</strong>, and it’s worth understanding what makes it different from every other “AI writing assistant” you’ve seen.</p>
+<hr>
+<section id="what-is-cogito-mode" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-cogito-mode">What Is Cogito Mode?</h3>
+<p>Cogito doesn’t write for you. It asks you questions.</p>
+<p>Accessible from a new button in the top-right corner of the editor, Cogito opens a side panel that reads your last sentence and generates exactly three follow-up questions — prompts designed to sharpen your thinking, surface assumptions, or push your argument further. You can insert those questions directly into your document as structured block content, essentially scaffolding your own reflection inside the draft itself.</p>
+<p>There are two inference modes: <strong>Lite</strong>, for speed, and <strong>Deep</strong>, for heavier reasoning. Both run locally. No data leaves your machine.</p>
+<p>The philosophy here is deliberate. Cogito isn’t trying to complete your thoughts — it’s trying to expand and refine them.</p>
+<hr>
+</section>
+<section id="what-changed-since-v1.1.4" class="level3">
+<h3 class="anchored" data-anchor-id="what-changed-since-v1.1.4">What Changed Since v1.1.4</h3>
+<p>The jump from v1.1.4 (released just two days earlier, on 31 March) to v1.1.5 is surprisingly large for such a short window.</p>
+<p>v1.1.4 focused on polish and tooling hygiene: replacing all emoji icons across the application with modern SVG icons from <a href="https://lucide.dev">Lucide Icons</a>, wiring ESLint into pre-commit hooks, and improving the Makefile with a <code>help</code> command. These aren’t flashy changes, but they signal a codebase being prepared for something bigger.</p>
+<p>v1.1.5 is that something bigger.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>v1.1.4</th>
+<th>v1.1.5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AI features</td>
+<td>None</td>
+<td>Cogito side panel, Lite/Deep models</td>
+</tr>
+<tr class="even">
+<td>Testing</td>
+<td>Pre-existing suite</td>
+<td>QUnit + Cypress E2E for Cogito</td>
+</tr>
+<tr class="odd">
+<td>Release pipeline</td>
+<td>release-please automation</td>
+<td>Build validation + ink-app.html gating</td>
+</tr>
+<tr class="even">
+<td>UI</td>
+<td>SVG icons replacing emojis</td>
+<td>Cogito button top-right</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="why-this-release-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-release-matters">Why This Release Matters</h3>
+<p>Until now, ink was a very good local markdown editor with solid export capabilities. v1.1.5 marks the beginning of a different identity: a <em>thoughtful writing environment</em> that uses AI not to produce output, but to generate productive friction.</p>
+<p>In an era where most AI writing tools are racing toward full automation, Cogito Mode is an interesting counter-argument. It keeps you in the seat. It treats your ideas as worth developing, not replacing.</p>
+<p>If that sounds like the kind of tool you’ve been waiting for, <a href="https://github.com/feddernico/ink/releases/tag/v1.1.5">the release is available on GitHub</a> — a single self-contained <code>ink-app.html</code> file you can run in any browser, with no installation required.</p>
+<p>You can also <a href="https://viscioletti.com/ink">give it a try here</a></p>
+<hr>
+<p><em>Follow the project at <a href="https://github.com/feddernico/ink">github.com/feddernico/ink</a>. Built by <a href="https://github.com/feddernico">@feddernico</a>.</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>release</category>
+  <category>open-source</category>
+  <category>productivity</category>
+  <category>tools</category>
+  <category>markdown</category>
+  <category>ai</category>
+  <guid>https://viscioletti.com/posts/2026/04/03/ink-v1-1-5-meet-cogito-your-local-first-writing-companion/</guid>
+  <pubDate>Fri, 03 Apr 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://viscioletti.com/posts/2026/04/03/ink-v1-1-5-meet-cogito-your-local-first-writing-companion/images/ink-cogito-mode-descartes.png" medium="image" type="image/png" height="79" width="144"/>
+</item>
 <item>
   <title>Come un lago di notte</title>
   <dc:creator>Federico Viscioletti</dc:creator>
@@ -3125,62 +3223,6 @@ Body of the article goes here
   <guid>https://viscioletti.com/posts/empower-your-projects-building-the-future-with-chatgpts-promptgpt-a-breakthrough-in-app-development/</guid>
   <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
   <media:content url="https://viscioletti.com/posts/empower-your-projects-building-the-future-with-chatgpts-promptgpt-a-breakthrough-in-app-development/images/web_development_chatGPT.png" medium="image" type="image/png" height="82" width="144"/>
-</item>
-<item>
-  <title>Elevate Data Analysis: The Ultimate Pandas Guide to Conditional Columns</title>
-  <dc:creator>Federico Viscioletti</dc:creator>
-  <link>https://viscioletti.com/posts/elevate-data-analysis-the-ultimate-pandas-guide-to-conditional-columns/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>In this article, discover an easy Pandas trick: Create conditional columns. You can create new columns in your DataFrame using this trick. Conditions applied to existing data serve as the basis for the new columns. It’s useful for feature engineering, data cleaning, or preparing data. Use it for analysis or modelling tasks.</p>
-<section id="the-snippet-to-create-conditional-columns" class="level2">
-<h2 class="anchored" data-anchor-id="the-snippet-to-create-conditional-columns">The Snippet to Create Conditional Columns</h2>
-<p>Creating new columns in your DataFrame based on specific conditions enhances data analysis. Finally, it improves model training processes. This method is not only efficient but also keeps your code clean and readable. Let’s dive into an example where we classify items based on their attributes:</p>
-<pre><code>import pandas as pd
-
-# Sample dataset: Products with varying weights
-data = {'Product': ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'],
-        'Weight': [120, 200, 5, 45, 8]}
-df = pd.DataFrame(data)
-
-# Creating a new column 'Category' based on the weight of the product
-df['Category'] = pd.cut(df['Weight'],
-                        bins=[0, 10, 100, 500],
-                        labels=['Light', 'Medium', 'Heavy'])
-
-print(df)</code></pre>
-<p><strong>Output</strong>:</p>
-<pre><code>      Product  Weight Category
-0       Apple     120    Heavy
-1      Banana     200    Heavy
-2      Cherry       5    Light
-3        Date      45   Medium
-4  Elderberry       8    Light</code></pre>
-</section>
-<section id="why-this-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-matters"><strong>Why This Matters</strong></h2>
-<p>The pd.cut() function is very useful. It segments and sorts data into bins. This example shows making a category from a number. But, you can apply the idea to many conditions and data types. It’s a clean method for using conditions to make new features or categorise data. It can also prepare data for group analysis.</p>
-</section>
-<section id="when-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="when-to-use"><strong>When to Use</strong></h2>
-<p>You can use this technique when you need to sort or divide your data. Do it based on particular thresholds or conditions. It’s especially useful in exploratory data analysis and in feature engineering. It’s also good for preparing data for machine learning.</p>
-<hr>
-<p>This pandas trick creates columns based on conditions. It helps data scientists prepare data. Equally important, it also ensures that analysis and model training are efficient and quick to run.</p>
-<p>If you liked this article, you might like another one I wrote about different <a href="https://viscioletti.com/2023/05/code-snippets-python-how-to-sort-dictionary-values/">techniques to sort dictionaries in Python</a>.</p>
-
-
-</section>
-
- ]]></description>
-  <category>data-science</category>
-  <category>python</category>
-  <guid>https://viscioletti.com/posts/elevate-data-analysis-the-ultimate-pandas-guide-to-conditional-columns/</guid>
-  <pubDate>Wed, 03 Apr 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://viscioletti.com/posts/elevate-data-analysis-the-ultimate-pandas-guide-to-conditional-columns/images/conditional_columns.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 </channel>
 </rss>
