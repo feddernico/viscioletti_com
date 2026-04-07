@@ -26,6 +26,105 @@
 }
 
 
+/* --------------- Apps showcase styles -------------- */
+.app-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.25rem;
+}
+
+.app-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #492711;
+  height: auto;
+  min-height: 0;
+  
+  transition:
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.app-card:hover {
+  transform: translateY(-8px);
+}
+
+.app-card--ink {
+  background: #1e1e1e;
+  border: 6px solid #1e1e1e;
+}
+
+.app-card__cover {
+  position: relative;
+  height: 11rem;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.app-card__cover-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.app-card__cover-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 30, 30, 0) 46%,
+    rgba(30, 30, 30, 0.18) 58%,
+    rgba(30, 30, 30, 0.55) 72%,
+    rgba(30, 30, 30, 0.88) 86%,
+    #1e1e1e 100%
+  );
+  pointer-events: none;
+}
+
+.app-card__info {
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.app-card__info {
+  flex: 0 0 auto;
+  padding: 1rem 1rem 1.25rem;
+  background: #1e1e1e;
+}
+
+.app-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.app-card__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.9rem;
+  flex: 0 0 auto;
+}
+
+.app-card__name {
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.app-card__desc {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
 /* ----------- Post page cover image styles ---------- */
 img.cover {
   width: 100%;
