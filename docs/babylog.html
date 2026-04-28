@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Federico Viscioletti">
-<meta name="dcterms.date" content="2024-01-31">
 
-<title>Peak Performance Modeling: Harnessing Bagging and Boosting for Superior Results – Viscioletti</title>
+<title>babylog – Viscioletti</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -28,23 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-4897d45d2f75ed4f519693be625836c5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-4897d45d2f75ed4f519693be625836c5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,29 +81,21 @@ gtag('config', 'G-DFJFYBP86L', { 'anonymize_ip': true});
 </script>
 
 
-<link rel="stylesheet" href="../../assets/css/styles.min.css">
-<meta property="og:title" content="Peak Performance Modeling: Harnessing Bagging and Boosting for Superior Results – Viscioletti">
-<meta property="og:description" content="The ideas factory">
-<meta property="og:image" content="https://viscioletti.com/posts/peak-performance-modeling-harnessing-bagging-and-boosting-for-superior-results/images/DALL·E-2024-01-31-22.55.39-Create-a-c_07cfcec0.png">
+<link rel="stylesheet" href="assets/css/styles.min.css">
+<meta property="og:title" content="babylog – Viscioletti">
 <meta property="og:site_name" content="Viscioletti">
-<meta property="og:image:height" content="481">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Peak Performance Modeling: Harnessing Bagging and Boosting for Superior Results – Viscioletti">
-<meta name="twitter:description" content="The ideas factory">
-<meta name="twitter:image" content="https://viscioletti.com/posts/peak-performance-modeling-harnessing-bagging-and-boosting-for-superior-results/images/DALL·E-2024-01-31-22.55.39-Create-a-c_07cfcec0.png">
-<meta name="twitter:image-height" content="481">
-<meta name="twitter:image-width" content="1024">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="babylog – Viscioletti">
+<meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Viscioletti</span>
     </a>
   </div>
@@ -116,11 +106,11 @@ gtag('config', 'G-DFJFYBP86L', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../ink.html"> 
+    <a class="nav-link" href="./ink.html"> 
 <span class="menu-text">ink</span></a>
   </li>  
   <li class="nav-item compact">
@@ -141,130 +131,93 @@ gtag('config', 'G-DFJFYBP86L', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Peak Performance Modeling: Harnessing Bagging and Boosting for Superior Results</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">ai</div>
-                <div class="quarto-category">data-science</div>
-                <div class="quarto-category">python</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Federico Viscioletti </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">January 31, 2024</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">babylog</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
 
 
-<p>In the world of machine learning, two key ensemble techniques stand out. They can improve model performance. They are: bagging and boosting. But how do you decide which one to use? Let’s break it down.</p>
-<section id="bagging-the-variance-reducer" class="level1">
-<h1>Bagging: The Variance Reducer</h1>
-<p>Bagging is a champion at reducing variance. It involves training many models on different subsets of the data. Then, it averages their predictions. This method works well for high-bias models. It cuts variance without adding bias. This makes the ensemble model more stable and accurate.</p>
-<section id="bagging-python-example" class="level2">
-<h2 class="anchored" data-anchor-id="bagging-python-example">Bagging: Python Example</h2>
-<p>In Python, you can use the `BaggingClassifier` from the `sklearn.ensemble` module. It is common for bagging. It involves creating many models on bootstrapped datasets. The models are usually of the same type. Then, they average their predictions.</p>
-<pre><code>from sklearn.ensemble import BaggingClassifier
-from sklearn.tree import DecisionTreeClassifier
-
-bagging_model = BaggingClassifier(DecisionTreeClassifier(), n_estimators=100)
-
-bagging_model.fit(X_train, y_train)</code></pre>
-</section>
-</section>
-<section id="boosting-the-bias-minimiser" class="level1">
-<h1>Boosting: The Bias Minimiser</h1>
-<p>Boosting is different. It trains models one at a time. Each one corrects the errors of the previous ones. This approach is great for models with high variance. It focuses on cutting bias. This enhances the ensemble’s ability to generalize.</p>
-<section id="boosting-python-example" class="level2">
-<h2 class="anchored" data-anchor-id="boosting-python-example">Boosting: Python Example</h2>
-<p>For boosting, `GradientBoostingClassifier` from `sklearn.ensemble` is a popular choice. It builds one tree at a time, where each new tree helps to correct errors made by previously trained trees.</p>
-<pre><code>from sklearn.ensemble import GradientBoostingClassifier
-
-boosting_model = GradientBoostingClassifier(n_estimators=100)
-
-boosting_model.fit(X_train, y_train)</code></pre>
-</section>
-</section>
-<section id="choosing-the-right-technique" class="level1">
-<h1>Choosing the Right Technique</h1>
-<p>The choice between bagging and boosting isn’t random. It depends on understanding your model’s current weaknesses. If your model suffers from high variance, consider boosting to cut bias. If the problem is high bias, bagging might be your go-to solution. It reduces variance.</p>
-</section>
-<section id="real-world-applications" class="level1">
-<h1><strong>Real-World Applications</strong></h1>
-<p>Many sectors use bagging and boosting techniques. They show their power in making predictive models better.</p>
-<section id="finance" class="level2">
-<h2 class="anchored" data-anchor-id="finance">Finance</h2>
-<p>Banks use these methods for credit scoring. They use them to check loan applicants’ risk levels and to find fraud. Accuracy is key.</p>
-</section>
-<section id="healthcare" class="level2">
-<h2 class="anchored" data-anchor-id="healthcare">Healthcare</h2>
-<p>In medical diagnostics, these techniques help predict disease outbreaks and diagnose patients. They do this by analyzing complex datasets, to ensure timely and accurate decisions.</p>
-</section>
-<section id="e-commerce" class="level2">
-<h2 class="anchored" data-anchor-id="e-commerce">E-commerce</h2>
-<p>These algorithms power recommendation systems. They analyze customer behavior and preferences. They improve shopping experiences and boost sales.</p>
-</section>
-<section id="agriculture" class="level2">
-<h2 class="anchored" data-anchor-id="agriculture">Agriculture</h2>
-<p>Predictive models help forecast crop yields. They also detect pest infestations. This helps with efficient farm management and productivity.</p>
-<p>Adding bagging and boosting to their machine learning strategies can boost industries. It will make them more efficient. They can also improve their decisions and service quality.</p>
-<p>In summary, both bagging and boosting offer clear advantages. The best one depends on your model’s characteristics. Picking the right technique can improve your model. This makes it a critical choice in your machine learning toolkit.</p>
-<p>Share your thoughts, experiences, or questions about bagging and boosting. You can post them in the comments below. Let’s continue learning together.</p>
+</header>
 
 
-</section>
-</section>
+<style>
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#app,
+.app {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-columns {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 0 !important;
+}
+
+#quarto-content {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+
+}
+
+#quarto-content .content {
+  margin-bottom: 0;
+}
+
+#quarto-content > * {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#title-block-header {
+  display: none;
+}
+
+.page-columns {
+  display: flex !important;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.page-columns > * {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+</style>
+<iframe src="babylog-app.html" style="width:100%; height:100%; border:none; margin-bottom:none;"></iframe>
+
+
 
 </main> <!-- /main -->
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    
-    var disqus_config = function () {
-        this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = window.location.pathname; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        this.page.title = document.title;   // Current page title
-    };
-    
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://viscioletti.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<script id="dsq-count-scr" src="//viscioletti.disqus.com/count.js" async=""></script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
